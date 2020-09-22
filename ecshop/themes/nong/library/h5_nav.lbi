@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src='/../{$template_dir}/h5/nav.js' type='text/javascript' charset='utf-8'></script>
+<div class="fixed_nv_top"></div>
+<ul class="fixed_nv">
+  <li><a href="/../h5/index.htm">首页</a></li>
+  <!--{foreach from=$categories item=cat name=catename }-->
+  <!-- {if $smarty.foreach.catename.index<10} -->
+  <li><a class="hreflang <!--{if $cat.id eq $category}-->word_c<!--{/if}-->" href="/../h5/#/products?category={$cat.id}" id="{$cat.id}" title="{$cat.name|escape:html}">{$cat.name|escape:html}</a></li>
+  <!--{/if}-->
+  <!--{/foreach}-->
+</ul>
+<div class="clear0"></div>

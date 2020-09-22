@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $fittings} -->
+<div class="leftbox">
+  <div class="t"><span class="border_c">{$lang.accessories_releate}</span></div>
+  <div class="info">
+    <!--{foreach from=$fittings item=goods}-->
+    <div class="fd_goods">
+      <div class="goodsw"> <a href="{$goods.url}" target="_blank"><img src="http://www.fd30.cn/demo1/{$goods.goods_thumb}" alt="{$goods.name|escape:html}" class="p" /></a>
+        <div class="i">
+          <div class="prices"> <em>{$lang.fittings_price}</em><font class="word_c">{$goods.fittings_price}</font> <del>{$goods.market_price}</del> </div>
+          <div class="name"> <a href="{$goods.url}" target="_blank" title="{$goods.goods_name|escape:html}">{$goods.short_name|escape:html}</a></div>
+        </div>
+      </div>
+    </div>
+    <!--{/foreach}-->
+  </div>
+</div>
+<div class="blank5"></div>
+<!-- {/if} -->

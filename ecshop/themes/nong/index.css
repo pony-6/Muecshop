@@ -1,0 +1,191 @@
+﻿img.zom{
+	-webkit-transition:All 0.6s ease-in-out;
+	-moz-transition:All 0.6s ease-in-out;
+	-o-transition:All 0.6s ease-in-out;
+    transition:All 0.6s ease-in-out;
+}
+img.zom:hover {
+	-webkit-transform:scale(1.05);
+	-moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+	-o-transform:scale(1.05);
+	transform:scale(1.05);
+}
+
+/* 首页全屏轮播 */
+.w100{ width:100%; overflow:hidden; }
+.slideBox{ width:1150px; height:400px; position:relative; margin:0 auto; }
+.slideBox .hd{ height:30px; overflow:hidden; position:absolute; right:0px; bottom:0px; z-index:1; width:100%; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; width:100%; text-align:center; }
+.slideBox .hd ul li{  width: 15px; line-height:999px; overflow:hidden; display:inline-block;height:15px;margin:0 8px; background: #666666;
+  -webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;-o-border-radius: 50%;border-radius: 50%;
+  cursor: pointer;opacity: 0.6;filter: alpha(opacity=60);}
+.slideBox .hd ul li.on{  background:#55BB19;opacity: 1;filter: alpha(opacity=100);}
+.slideBox .bd{ position:relative; height:100%; z-index:0; width:1920px; margin-left:-385px;   }
+.slideBox .bd li{ zoom:1;}
+.slideBox .bd img{ width:1920px; height:400px; display:block;  }
+.slideBox .prev,
+.slideBox .next{ display:none;}
+
+
+
+.b30 { margin-bottom:30px;}
+.border-eee {border: 1px solid #eee;}
+.day-surimg{height:380px;width:222px;overflow:hidden; position:relative;}
+.day-surimg img{width:222px;height:380px;text-align:center;}
+.day-surimg .dlcurrent img{transform: scale(1);transition: transform 4s linear 0s;}
+.day-surimg .d1{width:100%;height:380px;display:block;position:absolute;left:0px;top:0px;}
+.surprise-list{width:976px;height:380px;}
+.surprise-list li:first-child{border-left:0px solid #eee;float:left;width:243px;height:375px;padding-top:5px;}
+.surprise-list li{border-left:1px solid #eee;float:left;width:243px;height:375px;padding-top:5px;}
+.surprise-list li .imgBox{width:193px;height:193px;}
+.surprise-list li .imgBox img{width:200px;height:200px;}
+.surprise-list li h1{height:40px;line-height:20px; font-size:14px; margin-top:5px;}
+.imgBox{ overflow: hidden; display: block;font-size:0px;}
+.atonce-buy{text-decoration: none;width:73px;padding-left:20px; font-size:14px;font-weight: bold;height:42px;line-height:42px;color:#fff;background:url(images/daysur_ico.png) no-repeat -4px -8px;display:block; text-align:center;}
+.atonce-buy:hover{text-decoration: none;width:77px;padding-left:20px;height:42px;line-height:42px;color:#fff;background:url(images/daysur_ico.png) no-repeat -4px -8px;display:block;}
+.p25 { font-weight:bold;padding:25px;}
+.sur-price {padding-left:22px;}
+.sur-num { font-weight:700;color:#ff4400;font-size: 22px;}
+.c999 { color:#999; padding-left:3px;}
+
+.newopro-l{ width: 224px;height: 478px;}
+.newopro-l img{ width: 224px;height: 478px;}
+.pointer{}
+.newopro-r{ width:926px; padding: 0 24px;}
+.index-tt{ line-height: 60px;}
+.index-tt .fr{ font-size:14px;}
+.ibg{ background: url(images/indexico.png) no-repeat; display: inline-block;}
+.prolist-l{ padding: 0 30px;}
+.prolist-l .imgBox{ width: 168px; height: 168px;}
+.prolist-l .imgBox img{ width: 168px; height: 168px;}
+
+.prolist-cent{ padding: 15px 0; border-bottom: 1px solid #eee;}
+.prolist-cent:last-child{border-bottom:none;}
+.prolist-r{ width: 680px; float:right;}
+.prolist-r h3{ line-height: 34px;}
+.prolist-r p{ line-height: 20px; max-height: 40px; overflow: hidden; color: #999;}
+.prolist-r div{line-height: 56px; padding-top: 12px;}
+.p-price{ color: #f40;}
+.p-price i{font-size: 20px; }
+.p-price em{font-size: 28px;margin-right: 10px;}
+.p-price del{ color: #999;}
+.p-buy{width: 188px; height: 56px; line-height: 56px; color: #fff; font-weight:bold; font-size: 18px; text-indent: 78px; background-position: 0 -36px; margin-left: 25px;}
+.p-buy:hover{text-decoration: none;}
+.p-unbegin{background-position: 0 -280px;}
+.p-buy:hover{color: #fff;}
+.p-time .ibg{ width: 17px; height: 17px; background-position: 0 -17px; margin-right: 5px;}
+
+
+/*活动四个广告*/
+.show-ad { width:1200px; margin:0 auto; }
+.show-ad div { margin-right:-50px}
+.show-ad a {float:left;width:580px;height:250px;border:1px solid #e5e5e5;margin:0 32px 32px 0;background:#fff;overflow:hidden;position:relative;-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;transition:all .4s;}
+.show-ad a:hover {border-color:#55BB19;box-shadow:0 0 20px rgba(0,0,0,0.3)}
+.show-ad a img {width:580px;height:250px;}
+
+
+
+
+ 
+.series_box { border-top:1px solid #55BB19;margin-bottom:30px;background-color:#fff}
+.series_info {width:250px;height:450px;border-bottom:1px solid #f4f4f4;float:left;overflow:hidden}
+.series_info .name_hufu { height:50px;line-height:50px;background:#55BB19;font-size:20px;color:#fff;text-align:center;}
+.series_box .series_pic {width:250px;overflow:hidden;}
+.series_box .series_pic img {
+	width:250px;
+	height:400px;
+	vertical-align:top;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	-ms-transition:all 2s;
+	-o-transition:all 2s;
+	transition:all 2s;
+	-webkit-transform:scale(1)
+}
+.series_box .series_pic img:hover {
+	-webkit-transform:scale(1.05)
+}
+.series_box .pro_list {width:730px;height:450px;overflow: hidden;float:left;border-bottom: 1px solid #f4f4f4;}
+.series_box .pro_list ul { padding-left:5px;margin-right:-30px;zoom:1}
+.series_box .pro_list li {
+	float:left;
+	_display:inline;
+	width:152px;
+	height:204px;
+	padding:15px 13px 0 13px;
+	overflow:hidden
+}
+.series_box .pro_list li .pic { overflow:hidden;position:relative; width:160px; height:160px;text-align:center;}
+.series_box .pro_list .pic .gwc2 { position:absolute; left:0; bottom:-24px;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	transition:all 0.5s;
+    width:100%;height: 24px;display: block;background:#76ac25 url(images/gwc.png) no-repeat 35px center;
+    line-height:24px; padding-left:10px;color: #fff;filter:alpha(opacity=95);-moz-opacity:0.95;opacity:0.95;
+}
+.series_box .pro_list li .pic:hover .gwc2 { bottom:0px;}
+.series_box .pro_list li .pic img {width:100%;height:100%;vertical-align:top}
+.series_box .pro_list li h3 {color:#666;height:18px;overflow:hidden;font-size:12px;margin:5px 0 2px 0}
+.series_box .pro_list li .price { color: #f40;font-size:16px}
+.series_box .pro_list li a {display:block;text-decoration:none}
+
+
+
+
+.goodsr { position:relative;float:right;    width:220px; height:451px;background:#f4f4f4;}
+.goodsr .brand_cata { height:200px;overflow:hidden;padding:9px 0 0 11px;}
+.goodsr .fl_pic { position:absolute; left:0px; bottom:0px;}
+.goodsr .brand_cata a {border-radius: 50%;-moz-border-radius:50%; background:#fff; float:left;color:#666;display:inline-block;
+	font-size:13px;height:56px; font-size:12px; font-family:Arial, Helvetica, sans-serif;text-align:center;
+	line-height:56px;width:56px;margin:5px;overflow:hidden;}
+.goodsr .brand_cata a:hover{ background:#ff6c00; color:#fff; text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.w-img { width:1200px; margin:0 auto 30px auto;}
+.w-img img { width:100%; height:auto;}
+
+/***************左侧楼层定位***************/
+
+.elevator { position:fixed; left:50%; margin-left:-645px; top:50%; margin-top:-180px; z-index:999; width:38px; }
+
+@media screen and (max-width:1300px){
+.elevator { left:10px; margin-left:0px;}
+}
+.elevator .elevator-floor {
+    width:38px;
+    height: 400px;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.elevator a { text-align:center; display: inline-block; width:38px; height:35px;text-align: center; text-decoration: none;  
+    position: relative;text-decoration: none; line-height:16px; padding:5px 0 0 0;background:#f8f8f8;margin-bottom:2px; color:#888; }
+.elevator .elevator-floor a.active,
+.elevator .elevator-floor a:hover {display: block; color:#fff; background:#55BB19;}
+.elevator .elevator-floor a:hover { color:#fff;}
+
+.elevator .elevator-floor a.topp {font-size:20px;color:#555; line-height:26px; height:34px; padding:0px;font-weight:500;}
+.elevator .elevator-floor a:hover.topp { color:#fff;}
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" >
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<style>
+body{ background:#FFF}
+</style>
+<!-- TemplateBeginEditable name="首页却换主广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads" id="Tr_cs{$ads_id}">{insert name='ads' id=$ads_id num=$ads_num}</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<div class="index_body" > <!-- #BeginLibraryItem "/library/index_ad1.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/i_recommend_new.lbi" --><!-- #EndLibraryItem -->
+  <div class="clear10"></div>
+</div>
+<!-- #BeginLibraryItem "/library/i_recommend_hot.lbi" --><!-- #EndLibraryItem -->
+<div class="index_body" > <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/index_ad2.lbi" --><!-- #EndLibraryItem -->
+  <!--1-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="1区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--2-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="2区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--3-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="3区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--4-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="4区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--5-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="5区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+    <!--6-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="6区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--7-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="7区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--8-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="8区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--9-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="9区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!--10-->
+  <div class="if_prc"> <!-- TemplateBeginEditable name="10区域" -->
+<!-- TemplateEndEditable -->
+    <div class="clear0"></div>
+  </div>
+  <!-- #BeginLibraryItem "/library/index_ad3.lbi" --><!-- #EndLibraryItem -->
+  <div class="clear10"></div>
+</div>
+<!-- #BeginLibraryItem "/library/index_comments.lbi" --><!-- #EndLibraryItem -->
+<script>
+  $(function (){
+ $(".categories a.home").addClass("av");
+
+$(".Tr_cs0").textSlider({
+            speeds: 5000,
+            lines: 1,
+            offset: 9000,
+            direc: 4,
+            qnum: 1
+        });
+
+$(".if_prc").each(function(i) {
+
+		var gcid=$(this).find(".i_t").attr("cid");
+
+	$(".post_cat"+gcid).find("a.index").clone().prependTo($(this).find(".i_t"));
+
+  	$(this).find(".ads").insertAfter($(this).find(".i_t"));
+
+ });
+
+});
+</script>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body></html>

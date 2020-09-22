@@ -1,0 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="{$template_dir}/images/fd30_08.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<script language='javascript' src='{$template_dir}/js/fdjs.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/fdjs.json.js' type='text/javascript' charset='utf-8'></script>
+<div class="reg_top" > <a href="../index.php" name="top"><img src="{$template_dir}/images/reg_logo.png" /></a> </div>
+<div class="clear0"></div>

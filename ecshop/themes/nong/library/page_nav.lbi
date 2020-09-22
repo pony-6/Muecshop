@@ -1,0 +1,11 @@
+<!--[if !IE]><!-->
+  <script src="{$template_dir}/js/scrollReveal.min.js"></script>
+<script>$(function (){
+window.sr = new scrollReveal({
+	// reset: true,
+	move: '100px',
+	mobile: true
+});})
+</script>
+<!--<![endif]-->
+ 

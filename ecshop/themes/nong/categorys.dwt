@@ -1,0 +1,73 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginLibraryItem "/library/h5_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/h5_nav.lbi" --><!-- #EndLibraryItem --> 
+<div class="web_body h5_category">
+<div class="ads">
+
+
+
+      {foreach from=$api_insert_ads item=ad}
+
+<a href="{$ad.id}" target="_blank" title="{$ad.ad_name}"><img src="{$ad.src}"></a>
+
+        {/foreach}
+
+</div>
+    <div class="clear0"></div>
+  <!--循环二级分类-->
+  <!--{foreach from=$cat_detail item=cat name=cats_detail}-->
+  <div class="h5_goods"  >
+    <div class="i_t"> <a href="/../h5/#/products?category={$cat.id}" target="_blank">{$cat.name}</a>
+      <P>{$cat.cat_desc}</P>
+    </div>
+    <!--{foreach from=$cat.goods_detail item=goods name=goods_detail}-->
+    <!--{if $smarty.foreach.goods_detail.iteration<=10}-->
+    <div class="h5_item">
+      <div class="h5_item_p"> <a target="_blank" href="/../h5/#/product?product={$goods.id}" class="pic"><img src="/../{$goods.thumb}" width="220" height="220" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+        <div class="goods_brief  brief_bg">{$goods.brief|truncate:13:""}</div>
+        <div class="goods_info">
+          <div class="goods_biaoq">
+            <!-- {if $goods.is_new} -->
+            <span  class="biaoq biaoq1">新品</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_best} -->
+            <span  class="biaoq biaoq2">推荐</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_hot} -->
+            <span  class="biaoq biaoq3">热销</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_promote} -->
+            <span  class="biaoq biaoq4">促销</span>
+            <!--{/if}-->
+          </div>
+          <div class="goods_name"><a target="_blank"  href="/../h5/#/product?product={$goods.id}"> {$goods.short_name|truncate:13:""} </a></div>
+          <div class="goods_price"><span class="word_c">
+            <!-- {if $goods.is_promote} -->
+            {$goods.promote_price}
+            <!-- {else}-->
+            {$goods.shop_price}
+            <!--{/if}-->
+            </span> </div>
+        </div>
+      </div>
+    </div>
+    <!--{/if}-->
+    <!--{/foreach}-->
+    <div class="clear0"></div>
+  </div>
+  <!--{/foreach}-->
+  <!--循环二级分类-->
+  <div class="clear10"></div>
+</div>
+<script>
+$(function (){$(".fixed-bottom a").eq(1).addClass("word_c");	
+/*$('.h5_goods').each(function(i){ 
+   if($(this).find(".h5_item").size()==0)
+  {
+	  $(this).hide();
+  }
+  })*/
+});
+
+</script>
+<!-- #BeginLibraryItem "/library/h5_foot.lbi" --><!-- #EndLibraryItem -->

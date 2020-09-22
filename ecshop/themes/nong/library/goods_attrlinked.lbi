@@ -1,0 +1,38 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 开始循环属性关联的商品 {foreach from=$attribute_linked item=linked name=attribute_linked}-->
+<!-- {if $linked.goods} -->
+<div class="i_recommend hot_goods attribute_linked_{$smarty.foreach.attribute_linked.index}">
+  <div class="all_tt"><span> {$linked.title|truncate:11:"...":true}</span>
+    <div class="clear0"></div>
+  </div>
+  <div class="Tr_cs">
+    <div class="cxjad_m">
+      <div class="i_prclist cxjinfo">
+        <!-- {foreach from=$linked.goods item=linked_goods_data} -->
+        <div class="prcitem cxjitem"  >
+          <div class="prcitem_border"> 
+          
+            <div class="p"><a href="{$linked_goods_data.url}" target="_blank" class="pic"><img src="{$linked_goods_data.goods_thumb}" alt="{$linked_goods_data.name|escape:html}"  /></a></div>
+            <div class="i">
+              <P class="name"> <a href="{$linked_goods_data.url}" target="_blank" title="{$goods.linked_goods_data_name|escape:html}">{$linked_goods_data.short_name|truncate:18:""}</a></P>
+              <div class="prices">           <em class="word_c">{$linked_goods_data.shop_price}</em></div>
+              <div class="goods_evaluation">{$linked_goods_data.evaluation}人评价</div>
+            </div>
+          </div>
+        </div>
+        <!-- {/foreach} -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- {/if} -->
+<script>
+$(".attribute_linked_{$smarty.foreach.attribute_linked.index}").textSlider({
+            speeds: 5000,
+            lines: 5,
+            offset: 9000000,
+            direc: 1,
+            qnum: 5
+        });
+</script>
+<!-- 结束属性关联的商品 {/foreach}-->

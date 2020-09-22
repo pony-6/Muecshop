@@ -1,0 +1,38 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="new_goods_t goods_t"> <b>新品首发</b> <span><a href="/../h5/#/products?sort_key=5" target="_blank">查看全部 ></a></span> </div>
+<div class="h5_goods flow_x_goods" >
+  <!--{foreach from=$new_goods item=goods name=new_goods}-->
+  <!-- {if $smarty.foreach.new_goods.index<6} -->
+  <div class="h5_item x_goods">
+    <div class="h5_item_p"> <a target="_blank" href="/../h5/#/product?id={$goods.id}" class="pic"><img src="/../{$goods.thumb}" width="220" height="220" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+      <div class="goods_info">
+        <div class="goods_biaoq">
+          <!-- {if $goods.is_new} -->
+          <span  class="biaoq biaoq1">新品</span>
+          <!--{/if}-->
+          <!-- {if $goods.is_best} -->
+          <span  class="biaoq biaoq2">推荐</span>
+          <!--{/if}-->
+          <!-- {if $goods.is_hot} -->
+          <span  class="biaoq biaoq3">热销</span>
+          <!--{/if}-->
+          <!-- {if $goods.promote_price} -->
+          <span  class="biaoq biaoq4">促销</span>
+          <!--{/if}-->
+        </div>
+        <div class="goods_name"><a target="_blank"  href="/../h5/#/product?id={$goods.id}"> {$goods.short_name|truncate:13:""} </a></div>
+        <div class="goods_brief">{$goods.brief|truncate:13:""}</div>
+        <div class="goods_price"><span class="word_c">
+          <!-- {if $goods.promote_price} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+          </span> </div>
+      </div>
+    </div>
+  </div>
+  <!--{/if}-->
+  <!--{/foreach}-->
+  <div class="clear0"></div>
+</div>

@@ -1,0 +1,13 @@
+<!-- #BeginLibraryItem "/library/h5_header.lbi" --><!-- #EndLibraryItem -->
+<div id="fd_myID"><!-- #BeginLibraryItem "/library/h5_nav.lbi" --><!-- #EndLibraryItem -->
+  <div class="web_body"> <!-- #BeginLibraryItem "/library/h5_tree.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/h5_new.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/h5_hot.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/h5_promotion.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/h5_prc.lbi" --><!-- #EndLibraryItem -->
+    <div class="clear0"></div>
+  </div>
+</div>
+<script>
+$(function (){		
+$(".fixed_nv a").eq(0).addClass("word_c");			
+$(".fixed-bottom a").eq(0).addClass("word_c");	
+})	
+</script>
+<!-- #BeginLibraryItem "/library/h5_foot.lbi" --><!-- #EndLibraryItem -->

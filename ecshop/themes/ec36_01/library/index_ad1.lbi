@@ -1,0 +1,7 @@
+<div class="i_t"><span> 品牌制造商<b>工厂直达消费者，剔除品牌溢价</b> </span> <a href="../search.php?intro=new" class="more"> 更多制造商  ></a>
+    <div class="clear0"></div>
+  </div><div class="index_ad1 transition_scale_a">
+  
+  {insert name='ads' id=111 num=4}
+  <div class="clear0"></div>
+</div>

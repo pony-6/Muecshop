@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods}-->
+<div class="leftbox">
+  <div class="t"><span class="border_c"> 积分商城热卖商品</span></div>
+  <div class="info" id="show_hot_area">
+    <!--{foreach from=$hot_goods item=goods}-->
+    <div class="fd_goods">
+      <div class="goodsw"> <a  href="goods.php?id={$goods.id}"  target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="p" /></a>
+        <div class="i">     <p class="name"> <a  href="goods.php?id={$goods.id}"  target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+          <div class="prices"> <del>参考价：{$goods.shop_price}</del><br>
+ {$lang.exchange_integral}<font class="word_c">{$goods.exchange_integral}</font> 积分 </div>
+     <div class="btn">
+              <form action="exchange.php?act=buy" method="post" name="ECS_FORMBUY"  >
+                <input type="hidden" name="goods_id" value="{$goods.id}" />
+                <input type="submit" value="立即兑换" class="bg_c1 fd_submit" />
+              </form>
+            </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    <!--{/foreach}--><div class="clear0"></div>
+  </div>
+</div>
+<!-- {/if} -->

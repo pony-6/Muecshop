@@ -1,0 +1,90 @@
+<!-- $Id: shop_config.htm 16865 2009-12-10 06:05:32Z sxc_shop $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,../js/region.js"}
+<div class="tab-div">
+    <!-- tab bar -->
+<!--    <div id="tabbar-div">-->
+<!--        <p>-->
+<!--            {foreach from=$group_list item=group name="bar_group"}<span class="tab-front" id="{$group.code}-tab">{$group.name}</span>{/foreach}-->
+<!--        </p>-->
+<!--    </div>-->
+    <!-- tab body -->
+    <div id="tabbody-div" style="width: 90%; margin: 0 auto; border: 0;">
+        <form action="sms.php?act=sms_set_update" method="post">
+            <table style="width: 500px; margin: 0 auto">
+                <tr>
+                    <h2 style="text-align: center">短信配置(非ecshop自带)</h2>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;font-size: 12px">用户ID:</td>
+                    <td><input type="text"  name="user_id" value="{$data.user_id}" style="width:300px;height:30px;"></td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold;font-size: 12px">账号:</td>
+                    <td><input type="text" name="user_name"  value="{$data.user_name}" style="width:300px;height:30px;"></td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold;font-size: 12px">密码:</td>
+                    <td><input type="password"  name="password" value="{$data.password}" style="width:300px;height:30px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;font-size: 12px">短信地址:</td>
+                    <td><input type="text"  name="url" value="{$data.url}" style="width:300px;height:30px;"></td>
+                </tr>
+                <tr>
+                <td style="font-weight: bold;font-size: 12px">是否开启:</td>
+                <td><p><input type="radio" name="status" value="1" {if $data.status =='1' } checked{/if}>是
+                    <input type="radio" name="status" value="2" {if $data.status =='2' } checked{/if}>否</p></td>
+            </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="提交" name="pay_small_submit" style="width: 300px;height: 30px;margin-right: 86px"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+{insert_scripts files="tab.js,validator.js"}
+{literal}
+<script language="JavaScript">
+    region.isAdmin = true;
+    onload = function()
+    {
+        // 开始检查订单
+        startCheckOrder();
+    }
+    var ReWriteSelected = null;
+    var ReWriteRadiobox = document.getElementsByName("value[209]");
+
+    for (var i=0; i<ReWriteRadiobox.length; i++)
+    {
+        if (ReWriteRadiobox[i].checked)
+        {
+            ReWriteSelected = ReWriteRadiobox[i];
+        }
+    }
+
+    function ReWriterConfirm(sender)
+    {
+        if (sender == ReWriteSelected) return true;
+        var res = true;
+        if (sender != ReWriteRadiobox[0]) {
+            var res = confirm('{$rewrite_confirm}');
+        }
+
+        if (res==false)
+        {
+            ReWriteSelected.checked = true;
+        }
+        else
+        {
+            ReWriteSelected = sender;
+        }
+        return res;
+    }
+</script>
+{/literal}
+{include file="pagefooter.htm"}

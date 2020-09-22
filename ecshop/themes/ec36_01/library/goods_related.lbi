@@ -1,0 +1,58 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+<div class="i_recommend">
+  <div class="all_tt"><span> {$lang.releate_goods}</span>
+    <div class="clear0"></div>
+  </div>
+  <div class="Tr_cs">
+    <div class="cxjad_m">
+      <div class="i_prclist cxjinfo">
+    <!--{foreach from=$related_goods item=releated_goods_data}-->
+        <div class="prcitem cxjitem cxjitem_{$smarty.foreach.hot_goodsss.index}"  >
+          <div class="prcitem_border">
+            <div class="p"><a href="{$releated_goods_data.url}" class="pic"><img src="{$releated_goods_data.goods_thumb}"  alt="{$releated_goods_data.name|escape:html}" class="releated_goods_dataimg" /></a></div>
+            <div class="i">
+              <div class="name"><a href="{$releated_goods_data.url}" title="{$releated_goods_data.name|escape:html}">{$releated_goods_data.short_name|escape:html} </a></div>
+              <!-- {if $releated_goods_data.brief} -->
+              <div class="brief">{$releated_goods_data.brief}</div>
+              <!--{/if}-->
+              <div class="prices">
+                <!-- {if $releated_goods_data.promote_price neq ""} -->
+        <em class="word_c">{$releated_goods_data.promote_price}</em>
+                <!-- {else}-->
+                <em class="word_c">{$releated_goods_data.shop_price}</em>
+                <!--{/if}-->
+              </div>
+              <div class="goods_evaluation">{$releated_goods_data.evaluation}人评价</div>
+            </div>
+          </div>
+        </div>
+        <!--{/foreach}-->
+        <div class="clear0"></div>
+      </div>
+    </div>
+    <div class="TABLE_S">
+      <table border="0">
+        <tbody>
+          <tr>
+            <td><b class="cxjli"></b> <b class="cxjli"></b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="clear10"></div>
+</div>
+<script>if($(".i_recommend .cxjitem").size()<5){
+	$(".i_recommend .TABLE_S").hide();
+	};
+$(".i_recommend").textSlider({
+            speeds: 5000,
+            lines: 5,
+            offset: 9000000,
+            direc: 1,
+            qnum: 5
+        });
+</script>
+<!-- {/if} -->
+

@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="had">{insert name='ads' id=70 num=1}</div>
+<div style="margin-top:0px; height:20px;"></div>
+<div class="i_cat1egory">
+  <ul>
+    <!--{foreach from=$categories item=cat1 name=cat1ename }-->
+    <li class="li{$smarty.foreach.cat1ename.iteration}">
+      <div class="ct"><img src="images/ad/cat{$smarty.foreach.cat1ename.iteration}.jpg" alt="" /><a href="cat1egorys.php?id={$cat1.id}">{$cat1.name|escape:html}</a> </div>
+      <div class="next_t">
+        <!--{if $cat1.cat_id}-->
+        <!--{foreach   from=$cat1.cat_id item=child name=childname}-->
+        <!--{if $childer.fdcolor}-->
+        <a class="xz" href="{$child.url}">{$child.name|escape:html}</a>
+        <!--{/if}-->
+        <!--{/foreach}-->
+        <!--{/if}-->
+      </div>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+  <div class="clear0"></div>
+</div>

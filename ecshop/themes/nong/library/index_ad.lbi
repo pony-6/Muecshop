@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+{insert name='ads' id=19 num=5}
+<script>
+
+$(".Tr_cs0").textSlider({
+            speeds: 5000,
+            lines: 1,
+            offset: 9000,
+            direc: 4,
+            qnum: 1
+        });
+ </script>
+<style>
+.Tr_cs0,.Tr_cs0 .cxjad_m {width:1226px; margin:auto;} 
+.Tr_cs0 .cxjitem{ width:100%; clear:both; text-align:center} 
+.Tr_cs0 .cxjitem img{ display:block; margin:auto}
+.Tr_cs0 .up_down{}
+.Tr_cs0 .up_down .pp{ right:0px; width:992px;}
+ </style>

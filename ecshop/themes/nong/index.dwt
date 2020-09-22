@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="themes/nong/skin/css/min.css">
+<link rel="stylesheet" href="themes/nong/skin/css/base.css">
+<link rel="stylesheet" href="themes/nong/skin/css/tm.css">
+<link rel="stylesheet" href="themes/nong/skin/css/specail.css">
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='utils.js'}
+
+</head>
+<body>
+<script type="text/javascript" src="themes/nong/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="themes/nong/js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="themes/nong/js/commonNew.js"></script>
+<script type="text/javascript" src="themes/nong/js/transport.js"></script>
+
+<style type="text/css">
+#category_tree { display:block;}
+</style>
+<script>
+	$(function(){
+	  $(".tang1").insertBefore(".qing1")
+	  $(".tang2").insertBefore(".qing2")
+	})
+</script>
+
+<div id="content" class="eshop head-expand tb-shop">
+
+
+	<div class="middle">
+
+      <a href="{$index_data1.ad_link}"><div class="middle-item middle1"  style="background: url({$index_data1.ad_code}) no-repeat;"></div></a>
+
+      <a href="{$index_data2.ad_link}"><div class="middle-item middle2"  style="background: url({$index_data2.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data3.ad_link}"><div class="middle-item middle3"  style="background: url({$index_data3.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data4.ad_link}"><div class="middle-item middle4"  style="background: url({$index_data4.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data5.ad_link}"><div class="middle-item middle5"  style="background: url({$index_data5.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data6.ad_link}"><div class="middle-item middle6"  style="background: url({$index_data6.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data7.ad_link}"><div class="middle-item middle7"  style="background: url({$index_data7.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data8.ad_link}"><div class="middle-item middle8"  style="background: url({$index_data8.ad_code}) no-repeat;"></div></a>
+      <a href="{$index_data9.ad_link}"><div class="middle-item middle9"  style="background: url({$index_data9.ad_code}) no-repeat;"></div></a>
+
+	</div>
+
+	<!--catgoods-->
+	<!--{foreach from=$categorys item=cate}-->
+	<div style="width:100%">
+        <div class="cat-middle middle-item  middle10">
+            <div class="layout">
+                <div class="title">
+                    <a href ="">{$cate.cat_name}</a>
+                 </div>
+                <div class="des">{$cate.cat_desc}</div>
+            </div>
+        </div>
+    </div>
+	<div class="layout grid-m0 J_TLayout">
+	    <div class="col-main">
+	        <div class="main-wrap J_TRegion">
+				<div class="J_TModule">
+					<div class="skin-box tb-module tshop-pbsm tshop-pbsm-shop-item-recommend"  style="height: auto;">
+						<s class="skin-box-tp"><b></b></s>
+						<div class="skin-box-bd">
+							<div class="item4line1">
+							<!--{foreach from=$cate.goods item=goods name=foo}-->
+								<dl class="item {if $smarty.foreach.foo.iteration % 4 == 0}last{/if}">
+									<dt class="photo">
+										<a href="{$goods.url}" target="_blank">
+											<img src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+										</a>
+									</dt>
+									<dd class="detail">
+										<a class="item-name" href="{$goods.url}" target="_blank">{$goods.short_name|escape:html}</a>
+										<div class="attribute">
+											<div class="cprice-area">
+												<span class="symbol"> ¥</span>
+												<span class="c-price">
+													<!-- {if $goods.promote_price neq ""} -->
+													  {$goods.promote_price}
+													  <!-- {else}-->
+													  {$goods.shop_price}
+													<!--{/if}-->
+												</span>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							 <!--{/foreach}-->
+							</div>
+
+						</div>
+						<s class="skin-box-bt"><b></b></s>
+					</div>
+				</div>
+
+            </div>
+        </div> 
+    </div>
+    <!--{/foreach}-->
+	<!--catgoods-->
+</div>
+
+
+
+
+<script>
+	var width = $(window).width();
+	var c_width = 1920 - width;
+	var left = "-"+c_width/2+"px";
+	$(".middle-item").css("margin-left",left);
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

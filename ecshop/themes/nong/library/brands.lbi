@@ -1,0 +1,14 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="leftbox" >
+  <div class="t"><span  class="border_c">品牌</span><a  href="../brand.php" target="_blank">more></a></div>
+  
+ 
+  <ul class="brand_list">
+    <!-- {if $brand_list} -->
+    <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+    <li> <a href="{$brand.url}"><span class="img"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" /></span> </a></li>
+    <!-- {/foreach} -->
+    <!-- {/if} -->
+  </ul>
+  <div class="clear0"></div>
+</div>

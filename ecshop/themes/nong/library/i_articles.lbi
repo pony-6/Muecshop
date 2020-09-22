@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ 
+
+
+<div class="leftbox" >
+  <div class="t"><span class="border_c">成人用品资讯</span><a href="{$articles_cat.url}" class="amore">more></a></div>
+ 
+    <ul class="article_item">
+      <!--{foreach from=$class_articles_12 item=article}-->
+      <li><a href="{$article_item.url}" title="{$article.title|escape:html}"> {$article.title|escape:html} <span> {$article.add_time}</span> </a></li>
+      <!-- {/foreach} -->
+    </ul>
+   <div class="clear0"></div>
+</div>

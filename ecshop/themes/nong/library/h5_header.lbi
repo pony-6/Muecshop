@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<script src="/../{$template_dir}/h5/scrollReveal.min.js"></script>
+<script src='/../{$template_dir}/h5/TouchSlide.js' type='text/javascript' charset='utf-8'></script>
+<script src='/../{$template_dir}/h5/fd30_time.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body>
+<div class="fdnavbar navbar fixed-top">
+  <div class="search"> <a href="/../h5/index.htm" class="logo"><img src="/../{$template_dir}/h5/logo.png"></a> <a href="/../h5/#/search" class="SearchBar">
+    <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="inputstyle keywords" placeholder="请输入您要找的搜索商品" autocomplete="off" />
+    <input name="imageField" type="submit" value="" title="搜索" class="btn_search" style="cursor:pointer;" />
+    </a> </div>
+</div>
+
+

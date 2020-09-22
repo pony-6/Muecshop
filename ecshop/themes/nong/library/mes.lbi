@@ -1,0 +1,116 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="message_bg">
+  <div class="abouts_width">
+    <div class="abouts_t" data-sr="move 5rem, over 2s, enter top"><span class="word_c border_c">我要留言</span></div>
+    <form action="message.php" method="post" name="formMsg" onSubmit="return submitMsgBoard(this)">
+      <table width="100%" border="0" cellpadding="3">
+        <tr>
+          <td>{$lang.username}：
+            <!--{if $smarty.session.user_name}-->
+            <font class="f4_b">{$username}</font>
+            <label for="anonymous" style="margin-left:8px;">
+              <input type="checkbox" name="anonymous" value="1" id="anonymous" />
+              {$lang.message_anonymous}</label>
+            <!--{else}-->
+            {$lang.anonymous}
+            <!--{/if}--></td>
+        </tr>
+        <tr>
+          <td>{$lang.email}：<br>
+            <input name="user_email" type="text" class="fd_input" size="20" value="{$smarty.session.email|escape}" /></td>
+        </tr>
+        <tr style="display:none">
+          <th>{$lang.message_board_type}：</th>
+          <td><input name="msg_type" type="radio" value="0" checked="checked" />
+            {$lang.message_type[0]}
+            <input type="radio" name="msg_type" value="1" />
+            {$lang.message_type[1]}
+            <input type="radio" name="msg_type" value="2" />
+            {$lang.message_type[2]}
+            <input type="radio" name="msg_type" value="3" />
+            {$lang.message_type[3]}
+            <input type="radio" name="msg_type" value="4" />
+            {$lang.message_type[4]} </td>
+        </tr>
+        <tr>
+          <td>{$lang.message_title}：<br>
+            <input name="msg_title" type="text" class="fd_input" size="30" /></td>
+        </tr>
+        <!-- 判断是否启用验证码{if $enabled_mes_captcha} -->
+        <tr>
+          <td>{$lang.comment_captcha}：<br>
+            <input type="text" size="8" name="captcha"  class="fd_input" />
+            <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /></td>
+        </tr>
+        <!--{/if}-->
+        <tr>
+          <td>内容：<br>
+            <textarea name="msg_content" cols="50" rows="4" wrap="virtual" style="border:1px solid #ccc;"></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="hidden" name="act" value="act_add_message" />
+            <input type="submit" value="{$lang.post_message}" class="fd_submit bg_c" /></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+        {foreach from=$lang.message_board_js item=item key=key}
+        var {$key} = "{$item}";
+        {/foreach}
+        {literal}
+        /**
+         * 提交留言信息
+        */
+        function submitMsgBoard(frm)
+        {
+            var msg = new Object;
+
+             msg.user_email  = frm.elements['user_email'].value;
+             msg.msg_title   = frm.elements['msg_title'].value;
+             msg.msg_content = frm.elements['msg_content'].value;
+             msg.captcha     = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+
+            var msg_err = '';
+
+            if (msg.user_email.length > 0)
+            {
+               if (!(Utils.isEmail(msg.user_email)))
+               {
+                  msg_err += msg_error_email + '\n';
+                }
+             }
+             else
+             {
+                  msg_err += msg_empty_email + '\n';
+             }
+            if (msg.msg_title.length == 0)
+            {
+                msg_err += msg_title_empty + '\n';
+            }
+            if (frm.elements['captcha'] && msg.captcha.length==0)
+            {
+                msg_err += msg_captcha_empty + '\n'
+            }
+            if (msg.msg_content.length == 0)
+            {
+                msg_err += msg_content_empty + '\n'
+            }
+            if (msg.msg_title.length > 200)
+            {
+                msg_err += msg_title_limit + '\n';
+            }
+
+            if (msg_err.length > 0)
+            {
+                alert(msg_err);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        {/literal}
+        </script>

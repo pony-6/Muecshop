@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,user.js'} <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix userpage">
+  <!--left start-->
+  <div class="AreaL"> <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem --> </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="AreaR">
+  
+  
+
+    <div class="userCenterBox boxCenterList clearfix" >
+    
+      <h5><span>您的包裹物流状态</span></h5>
+				<div class="list-pop item">
+			 
+					<div class="bd">
+						<ul>
+							<!--此处不能单纯地循环，第一个li的第一个span没有hidden这个类名,  最后一个li要加last类名-->
+							<!--{foreach from=$logistics_info item=item}-->
+								<li>
+									<span class="day {$item.display}">{$item.day}<i class="inn word_c">{$item.weekday}</i></span>
+									<span class="time">{$item.time}</span>
+									<span class="txt">{$item.AcceptStation}</span>
+								</li>
+						     <!--{/foreach}-->
+							<!--此处不能单纯地循环，第一个li的第一个span没有hidden这个类名-->
+						</ul>
+					</div>
+				</div>
+      </div>
+ 
+ 
+  </div>
+  <!--right end-->
+</div>
+<div class="blank"></div>
+
+ 
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="footerbg">  
+<div class="footer-service footer">
+      <ul class="list-service">
+        <li> <a href="javascript:void(0)"><img src="images/fo1.png">官方正品</a> </li>
+        <li> <a href="javascript:void(0)"><img src="images/fo2.png">7天退货</a> </li>
+        <li> <a href="javascript:void(0)"><img src="images/fo3.png">15天退换货</a> </li>
+        <div class="clear0"></div>
+      </ul>
+      <div class="clear0"></div>
+    </div>
+    
+  <div class="footer_info footer">
+  
+  <div class="footHelp">
+ 
+            <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+            <a href="{$nav.url}" 
+  
+            <!-- {if $nav.opennew eq 1} -->
+            target="_blank"
+            <!-- {/if} -->
+            >{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+            |
+            <!-- {/if} -->
+            <!-- {/foreach} -->
+     
+    </div>
+   {$copyright}
+    {$shop_address} {$shop_postcode}<br />
+    
+    ICP备：<a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备16038652号-2</a>
+
+ 
+   </div>
+  <div class="clear10"></div>
+</div> 
+

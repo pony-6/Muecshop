@@ -1,0 +1,40 @@
+
+{include file="pageheader.htm"}
+<div style="width:100%;border:solid 1px #dddddd;padding: 25px;">
+    <div style="margin: 0 auto;width: 350px;">
+        <form action="mobile_setting.php" method="post" enctype="multipart/form-data">
+             <input type="file" name="img1">
+    {if $img1}
+             <img src="{$img1}" alt="" width="50px" height="50px">
+    {/if}
+            <p><span></span><input type="text" name="external_1" value="{$external_1}" placeholder="图片外部URL"></p>
+            <p><span>图片1链接：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="img_url1" value="{$img_url1}"></p>
+
+            <input type="file" name="img2">
+            {if $img2}
+            <img src="{$img2}" alt="" width="50px" height="50px">
+            {/if}
+            <p><span></span><input type="text" name="external_2" value="{$external_2}" placeholder="图片外部URL"></p>
+            <p><span>图片2链接：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="img_url2" value="{$img_url2}"></p>
+
+            <input type="file" name="img3">
+            {if $img3}
+            <img src="{$img3}" alt="" width="50px" height="50px">
+            {/if}
+            <p><span></span><input type="text" name="external_3" value="{$external_3}" placeholder="图片外部URL"></p>
+            <p><span>图片3链接：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="img_url3" value="{$img_url3}"></p>
+
+            <input type="file" name="img4">
+            {if $img4}
+            <img src="{$img4}" alt="" width="50px" height="50px">
+            {/if}
+            <p><span></span><input type="text" name="external_4" value="{$external_4}" placeholder="图片外部URL"></p>
+            <p><span>图片4链接：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="img_url4" value="{$img_url4}"></p>
+
+            <input type="hidden" name="act" value="up_index_image">
+    <button type="submit"> 提交 </button>
+    </div>
+</div>
+</form>
+
+{include file="pagefooter.htm"}

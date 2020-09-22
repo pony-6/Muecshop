@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="sort_goods_arr">
+  <!--{foreach from=$cat_detail item=cat name=cats_detail}-->
+  <div class="h5_goods" id="f{$smarty.foreach.cats_detail.iteration}">
+    <div class="i_t">{$cat.name}</div>
+    <!--{foreach from=$cat.goods_detail item=goods name=goods_detail}-->
+    <div class="h5_item">
+      <div class="h5_item_p"> <a target="_blank" href="/../h5/#/product?id={$goods.id}" class="pic"><img src="/../{$goods.thumb}" width="220" height="220" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+        <div class="goods_brief  brief_bg">{$goods.goods_brief|truncate:13:""}</div>
+        <div class="goods_info">
+          <div class="goods_biaoq">
+            <!-- {if $goods.is_new} -->
+            <span  class="biaoq biaoq1">新品</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_best} -->
+            <span  class="biaoq biaoq2">推荐</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_hot} -->
+            <span  class="biaoq biaoq3">热销</span>
+            <!--{/if}-->
+            <!-- {if $goods.is_promote} -->
+            <span  class="biaoq biaoq4">促销</span>
+            <!--{/if}-->
+          </div>
+          <div class="goods_name"><a target="_blank"  href="/../h5/#/product?id={$goods.id}"> {$goods.short_name|truncate:13:""} </a></div>
+          <div class="goods_price"><span class="word_c">
+            <!-- {if $goods.is_promote} -->
+            {$goods.promote_price}
+            <!-- {else}-->
+            {$goods.shop_price}
+            <!--{/if}-->
+            </span> </div>
+        </div>
+      </div>
+    </div>
+    <!--{/foreach}-->
+    <div class="h5_item h5_goods_more">
+      <div class="h5_item_p"><img src="/../{$template_dir}/h5/more.png"><a href="javascript:;" id="{$cat.id}"  class="hreflang" >更多{$cat.name}<span></span></a></div>
+    </div>
+    <div class="clear0"></div>
+  </div>
+  <!--{/foreach}-->
+  <div class="clear0"></div>
+</div>

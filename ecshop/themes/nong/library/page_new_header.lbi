@@ -1,0 +1,17 @@
+<div id="hd">
+	<div class="layout">
+		<div class="header-top">
+			<div class="header-logo">
+				<a href="/"><img src="{$shop_logo.value}"></a>
+			</div>
+			<ul class="nav">
+				<li><a href="catalog.php">本店所有商品</a></li>
+				<li><a {if $navigator_list.config.index eq 1} class="current"{/if} href="./" rel="nofollow">{$lang.home}</a></li>
+				<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav name=nav} -->
+				<li><a {if $nav.active eq 1} class="current"{/if} href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} rel="nofollow">{$nav.name}</a></li>
+				<!-- {/foreach} -->
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+	</div>
+</div>

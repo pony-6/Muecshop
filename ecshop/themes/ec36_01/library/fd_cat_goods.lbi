@@ -1,0 +1,20 @@
+<div class="prcitem  prcitem_{$smarty.foreach.fd_cat_goods.index}"  >
+      <div class="prcitem_border">
+        <div class="p"><a href="{$goods.url}" class="aimg"><img src="{$goods.thumb}"  alt="{$goods.name|escape:html}" class="goodsimg" /></a></div>
+        <div class="i">
+          <div class="bq">
+            <!-- {if $goods.is_promote} -->
+            <span class="biaoq biaoq1">促销</span>
+            <!--{/if}-->
+          </div>
+          <div class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html} </a></div>
+          <div class="prices">
+            <!-- {if $goods.promote_price neq ""} -->
+            <em class="word_c">{$goods.promote_price}</em>
+            <!-- {else}-->
+            <em class="word_c">{$goods.shop_price}</em>
+            <!--{/if}-->
+          </div>
+        </div>
+      </div>
+    </div>

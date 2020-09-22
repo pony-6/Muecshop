@@ -1,0 +1,331 @@
+.footerbg{ margin-top:30px;}
+.flowBox_login form{ width:49.5%; float:left}
+.flowBox_login .formCart_table td.td1{ text-align:right; width:80px;}
+
+.flow_top{ border-bottom-style:solid; border-bottom-width:3px; background:#FFF; padding-top:10px; padding-bottom:10px;}
+.flow_top .fr{ padding-top:30px;}
+.flow_top .fr a{ padding-left:5px; padding-right:5px;}
+ 
+/*     购物流程
+==================== */
+body{ background:#f5f5f5}
+.flow_box{ width:1226px; margin:auto}
+/*consignee*/
+/*#ajaxdemos_bg{display:none; background:#000;opacity:0.70;filter:alpha(opacity=70); position:fixed; left:0px; top:0px; z-index:99; width:100%; height:100%;}
+#ajaxdemos{ display:none; position:fixed; left:0px; top:0px; width:100%;  z-index:998}
+#ajaxdemos .flow_box{  background:#fff; width:920px; margin:100px auto; padding:30px; border-radius:10px; position:relative}
+*/
+
+.iframes{  width:920px;   border:0px; height:455px;  overflow:hidden}
+#ajaxdemos_bg,#ajaxdemos_fpbg{display:none; background:#000;opacity:0.70;filter:alpha(opacity=70); position:fixed; left:0px; top:0px; z-index:998; width:100%; height:100%;}
+#ajaxdemos{ display:none; position:fixed; left:0px; top:0px; width:100%;  z-index:999}
+
+#ajaxdemos_fp{ display:none; position:fixed; left:0px; top:0px; width:100%;  z-index:999}
+.ajax_info{ width:920px; margin:100px auto; border-radius:10px; padding:10px; background:#fff} 
+
+.consignee_fd{ background:#fff;  padding:20px; position:relative; width:880px;}
+.consignee_fd .flow_box{ width:100%; margin:auto}
+.consignee_fd .close_ajx{ position:absolute; right:-0px; top:-0px; display:block; width:20px; height:20px; line-height:20px; border-radius:20px; background:#FF6700; color:#FFF; text-align:center; cursor:pointer;}
+.consignee_fd .close_ajx a{ color:#FFF}
+.iframes .flow_box{ width:100%;}
+
+
+
+/*.close_ajx{ position:absolute; right:10px; top:10px; display:block; width:20px; height:20px; line-height:20px; border-radius:20px; background:#FF6700; color:#FFF; text-align:center; cursor:pointer;}
+.close_ajx a{ color:#FFF}*/
+.consignee .TABLE_S{ background:URL(dian.gif) left bottom repeat-x; margin-bottom:10px;}
+.consignee .TABLE_S li{ float:left; width:150px; line-height:35px; height:35px; border-top:1px solid #ddd; border-right:1px solid #ddd; text-align:center; cursor:pointer; background:#fff}
+.consignee .TABLE_S li.liv{border-top:3px solid #b32424; line-height:32px; font-weight:bold;}
+.consignee .TABLE_S li.cxjli_0{ border-left:1px solid #ddd; }
+.table_consignee td.td1{ text-align:right}
+.table_consignee td input{ line-height:28px; height:28px; border:1px solid #ddd; width:200px; padding-left:5px;}
+.table_consignee td input.fd_submit{line-height:35px; height:35px; width:120px;}
+
+.flowBox .table_consignee table th,.flowBox .table_consignee table td{border-top:0px;  }
+.flowBox .table_consignee table{ border:0px;}
+
+.consignee_info{border-color:#F00; border-style:dotted; border-width:3px; padding:15px; width:30%;}
+.consignee_infos div.border_c{ background:URL(iis.png) bottom right no-repeat; border-style:solid; border-width:2px;}
+.consignee_info .it{ line-height:30px; font-weight:bold; border-bottom:1px solid #eee}
+.consignee_info .it span{ font-weight:normal; padding-left:30px;}
+.consignee_info .im{ padding-top:10px; line-height:22px;}
+.consignee_info .ib{ text-align:center; padding-top:10px;}
+.consignee_info .ib a{ border:1px solid #eee; background:#f5f5f5; padding:3px 10px 3px 10px; line-height:25px; text-align:center}
+ /*consignee end*/
+
+.fd_goods_number a{ display:block; margin-bottom:2px; margin-left:2px;}
+
+/*表格*/
+.flowBox{background:#fff; margin-top:15px; padding:15px;font-size:14px; border:1px solid #eee}
+ 
+
+.flowBox .t{ line-height:36px; height:48px; background:#FFF; font-size:16px; color:#333; font-weight:bold}
+.flowBox .t span{ padding:0px 5px 0px 5px; color:#FFF;  margin-right:10px; font-size:16px; font-weight:bold;}
+.formCart_table1 th,.formCart_table1 td{ border-bottom:1px solid #eee;}
+.formCart_table1 td.td_amount{ text-align:right;}
+.formCart_table1 td.td_amount #cart_amount_desc{ display:block; padding-top:6px;}
+.formCart_table1 td.td_amount #cart_amount_desc i{ font-size:24px; font-weight:bold}
+.formCart_table1 td .pic { text-align:left; display:block; float:left}
+.formCart_table1 td .pic img{ padding-right:10px; text-align:left } 
+.formCart_table1 td span{}
+.formCart_table1 td span em{color:#999; font-style:normal; font-size:12px}
+
+.package_buy{ display:block; line-height:30px; font-weight:bold;}
+.package_buy span{ padding:2px 5px 2px 5px; border-radius:15px;}
+.suit_g a{ display:block; line-height:25px; color:#999}
+
+.formCart_table td.td1{ width:120px;}
+.formCart_table th{ text-align:left;color:#000; font-weight:bold}
+.formCart_table th,.formCart_table td{  padding:10px;  }
+
+
+.formCart_table2 td.td1{ text-align:right}
+.formCart_table2 td input.inputBg{ line-height:28px; height:28px; border:1px solid #ddd; width:200px; padding-left:5px;}
+.formCart_table2 td select{ height:30px; }
+.formCart_table2 td textarea{ width:80%; height:75px; vertical-align:text-top; line-height:25px; border:1px solid #eee; padding-left:10px; color:#999}
+
+.formCart_table_total td{ text-align:right}
+.formCart_table_total td font.exchange_integral{font-size:24px}
+.formCart_table_total td font.exchange_integral:first-letter{ font-size:14px}
+
+.flowBox_login .formCart_table_total td{ text-align:right}
+
+
+
+
+.flowBox h6{  color:#FFF; line-height:36px; height:38px; border:0px; background:#FFF; border-bottom:2px solid #b32424; margin-top:10px; margin-bottom:5px; position:relative}
+.flowBox h6 span{ display:block; width:130px; border:1px solid #b32424; border-top:4px solid #b32424; color:#b32424; border-bottom:0px;  text-align:center; text-indent:0px; font-size:16px; background:#FFF; padding:0px;}
+.flowBox h6 a{ color:#666; padding-right:10px; position:absolute; right:0px; top:0px;}
+.flowBox .i_prclist{border:1px solid #eee;}
+
+
+.step_all{ height:67px; width:980px; margin:auto; margin-top:-107px}
+.step_1{ background:url(steps_1.gif) right top no-repeat}
+.step_2{ background:url(steps_2.gif) right top no-repeat}
+.step_3{ background:url(steps_3.gif) right top no-repeat}
+/*输入框*/
+input.inputBg{ line-height:26px; height:26px; width:70%; background:none}
+.flowBox1 input.inputBg{ width:50px;line-height:20px; height:20px;}
+input.bnt_blue_2{ line-height:30px; height:30px;background:#b32424; font-size:14px; width:auto; padding-left:20px; padding-right:20px;}
+input.bnt_blue{ line-height:30px; height:30px;background:#b32424; margin-left:20px; font-size:14px}
+input.bnt_blue_1{line-height:30px; height:30px;background:#b32424;width:auto; padding-left:20px; padding-right:20px; font-size:14px}
+/*输入框 end*/
+
+
+
+
+
+/*.flowBox table.formCart_table td .fl a{ color:#000}
+.flowBox table.formCart_table td .fl p{ color:#999}
+.flowBox table.formCart_table td a.pic img{ width:60px; padding-right:10px;}
+
+
+.flowBox table{ margin:0px;border:1px solid #eee;  border-collapse: separate; width:100%;
+border-spacing: 0px}
+ 
+.flowBox table td{ background:#FFF;  padding:10px; margin:0px; border-top:1px solid #eee;  }
+
+.flowBox table td.td_discount{ font-weight:bold; background:#FFF9E9}
+.flowBox table td.td_discount em{ font-style:normal}
+.flowBox  #ECS_ORDERTOTAL  table td{ background:#FFF9E9}
+.f4_b{ color:#F00}
+
+
+
+
+.flowBox_login form td{ height:30px; vertical-align:middle}
+
+*/
+/*去结算*/
+.flowBox table.fd30_tt td{ height:44px; line-height:25px; vertical-align:middle; border:0px; text-align:right} 
+.fd30_tt td .clear{ padding-top:10px;} 
+.fd30_tt td .clear a{ display:block; float:right; line-height:44px; height:44px; margin-left:20px; padding-right:20px; padding-left:20px; border-radius:5px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;}
+.fd30_tt td .clear a.bg_c1{ background:#f5f5f5; color:#999; font-weight:normal}
+/*.fd30_checkout{ height:44px; line-height:44px; font-size:16px; font-weight:bold; color:#FFF; text-align:center; width:100px; background:#b32424; display:block; border-radius:2px}
+.fd30_checkout:hover{ color:#FFF}*/
+.order_total_btn{height:44px; line-height:44px; font-size:22px; border:0px; cursor:pointer; color:#FFF;  width:220px; background:#b32424; text-align:center; border-radius:5px; font-weight:bold}
+/*去结算 end*/
+
+#registerForm{ border-left:1px solid #eee}
+
+
+.flow_goods{ width:980px; margin:auto}
+.flow_goods a img{ width:180px; height:180px;}
+.flow_goods .i_prclist { border:1px solid #ccc}
+.flow_goods .i_prclist .cxjitem{ margin-left:7px; margin-right:7px; text-align:center}
+.flow_goods .i_prclist .cxjitem .intro{ display:none}
+.flow_goods .i_prclist .cxjitem .gel-price em{ color:#222222; font-size:16px; font-weight:600; font-family:"Tahoma"; font-style:normal}
+.flow_goods .i_prclist .cxjitem .gel-mktprice{  }
+.flow_goods .cxjitem ul li.point_num{  display:none}
+.flow_goods .cxjitem ul li.addToCart{ float:right; display:block}
+.flow_goods .cxjitem ul li.addToCart a{ display:block; height:35px; width:35px; background:url(buy.gif)}
+
+ 
+.step_cg{line-height:30px;  padding:10px; font-size:14px }
+.step_cg .order_sn{font-size:16px; font-weight:bold; padding:0px 0px 0px 60px; background:URL(cg.png) 10px 10px no-repeat #FFF; height:60px; line-height:60px;  }
+.step_cg .order_sn font{ color:#F60}
+.step_cg .flowBox_tab{ margin-top:15px; font-size:14px}
+.step_cg .flowBox_tab th{ vertical-align:top; background:#f5f5f5; white-space:nowrap}
+.step_cg .flowBox_tab td span{ color:#999}
+.step_cg .flowBox_tab td.amount_formated{ font-size:18px; color:#F00}
+.step_cg .flowBox_tab td.end a,.step_cg .flowBox_tab td.end input{ background:#F60; color:#FFF; font-size:16px; padding:5px 10px 5px 10px; border-radius:5px}
+.step_cg .flowBox_tab td em{ font-style:normal}
+
+.flowBox_tab_cg{ border:1px solid #eee; width:90%; margin:auto}
+.flowBox_tab_cg td{ background:#fff;}
+
+
+
+.order_submit_back{ text-align:center; padding-top:10px; font-size:14px}
+.order_submit_back a{ color:#F60}
+
+
+
+.boxCenterList table tr td{ color:#333}
+.f2{color:#000}
+
+.group_buy_Page{ width:990px; margin:auto}
+.group_buy_Page .fl{ width:690px;  border:1px solid #CCC; padding:8px;}
+.group_buy_Page .fl h1{ height:auto;color:#000; font-size:22px; font-weight:bold; line-height:35px;}
+.group_buy_Page .fl h1 a{ color:#000}
+.group_buy_Page .fl .goods_thumb{ clear:both; padding-bottom:15px; padding-top:15px; text-align:center} 
+.baidu_fengx{padding:15px; margin:auto}
+.bdsharebuttonbox{ float:right}
+.group_buy_Page .fl .goods_desc{ }
+.group_buy_Page .fl .goods_desc h2{ position:relative; padding-top:35px;margin-top:20px; margin-bottom:10px; border-bottom:2px solid #222222}
+.group_buy_Page .fl .goods_desc h2 span{position:absolute; left:0px; top:0px;padding:0px; margin:0px; line-height:35px; font-size:18px; font-weight:bold; color:#fff; width:156px; text-align:center; background:#222222; }
+.goods_desc img{ max-width:690px;}
+
+
+.group_buy_Page .fr{ width:262px; }
+.group_buy_Page .fr .fr_info{width:260px; border:1px solid #CCC;}
+.div_1{ position:relative; height:75px;}
+.div_1 .info{ width:300px; position:absolute; left:-20px; top:0px; height:72px; line-height:65px; background:url(qgbg.png) left top no-repeat; color:#FFF}
+.div_1 .info span{ font-size:26px; font-weight:bold; padding-left:15px;}
+.div_1 .info span i{ font-size:16px}
+.div_1 .info {}
+.div_1 .bnt_buy{position:absolute; right:5px;top:12px;  width:80px; line-height:35px;height:35px; text-align:center; font-size:16px; color:#F00}
+.div_1 .bnt_buy .an{ width:80px;height:35px; line-height:35px; font-size:18px; color:#F02828; border:0px; cursor:pointer; background:none; font-family:"微软雅黑"}
+.div_1 .bnt_buy .anend{background:url(qgbg.png) -195px -79px no-repeat; color:#FFF; cursor:default}
+.div_3 .loop label{ margin-left:0px; margin-right:7px;}
+.div_4{ clear:both;} 
+.div_4 span{ padding-left:10px;}
+.div_4 span em{ font-style:normal; color:#000}
+.div_5{clear:both;}
+.div_5 P{ text-align:left; background:url(time.png) left no-repeat; padding-left:25px;}
+.div_5 #leftTime{ background:none; display:block; float:none; clear:both; font-size:16px; color:#000}
+.div_6{clear:both; background:#f5f5f5;}
+.div_6 span{ display:block; font-size:18px; text-align:center; line-height:35px; color:#333}
+.div_6 span em{ font-style:normal; color:#C00; font-weight:bold; padding-right:5px;}
+.div_6 p{ line-height:35px; font-size:14px; background:url(shul.png) left no-repeat; text-align:center;color:#333; width:70%; margin:auto}
+
+.div_info{ padding:10px; color:#999}
+.gmxz{ padding-top:5px;}
+.gmxz h3{ padding:0px; text-align:left; line-height:25px; height:25px; border-bottom:2px solid #666; background:none;}
+.gmxz  table{ background:#ddd; margin:auto;}
+.gmxz  table td{ background:#FFF; padding:5px 3px 5px 3px ;margin:auto; margin-top:10px; white-space:nowrap}
+.gmxz  table .td1{ width:30%; text-align:right; background:#F9F9F9; font-weight:bold}
+ 
+ 
+
+
+.box_1 .userCenterBox{ border:0px;}
+.box_1 .userCenterBox .userMenu h2{background:#b32424; color:#FFF; height:35px;line-height:35px;}
+.box_1 .userCenterBox .userMenu h2 a{ background:none; color:#FFF;font-size:16px;height:35px;line-height:35px;}
+.box_1 .userCenterBox .userMenu dt{ background:URL(bg_help.png) right top no-repeat; height:30px;line-height:30px; text-indent:15px; font-size:14px; font-weight:bold}
+.box_1 .userCenterBox .userMenu dd{ width:80%; margin:auto}
+.box_1 .userCenterBox .userMenu dd a{height:23px;line-height:23px; border:0px; margin-top:5px; margin-bottom:5px; margin-left:0px; font-size:14px}
+.box_1 .userCenterBox .userMenu a.fd30_logout{ background:#999; color:#FFF; margin:auto; margin-top:15px;height:22px;line-height:22px; text-align:center; font-size:14px; font-weight:bold; width:100px;}
+.flow_goods{ width:980px; margin:auto}
+.flow_goods a img{ width:180px; height:180px;}
+.flow_goods .i_prclist { border:1px solid #ccc}
+.flow_goods .i_prclist .cxjitem{ margin-left:7px; margin-right:7px; text-align:center}
+.flow_goods .i_prclist .cxjitem .intro{ display:none}
+.flow_goods .i_prclist .cxjitem .gel-price em{ color:#b32424; font-size:16px; font-weight:600; font-family:"Tahoma"; font-style:normal}
+.flow_goods .i_prclist .cxjitem .gel-mktprice{  }
+.flow_goods .cxjitem ul li.point_num{  display:none}
+.flow_goods .cxjitem ul li.addToCart{ float:right; display:block}
+.flow_goods .cxjitem ul li.addToCart a{ display:block; height:35px; width:35px; background:URL(buy.gif)}
+
+.boxCenterList table tr td{ color:#333}
+.f2{color:#000}
+
+ 
+
+
+/*弹出购物车*/
+#speDiv{ border-radius:5px; line-height:25px;}
+#speDiv .conclose{ height:30px; line-height:30px; overflow:hidden; background:#f5f5f5}
+#speDiv .conclose span{ font-weight:bold; font-size:14px; float:left; display:block; padding-left:10px;}
+#speDiv .conclose a{ display:block; float:right; padding-right:10px;}
+#speDiv .toptitle{ padding:10px;}
+#speDiv .toptitle .pic{ display:block; float:left}
+#speDiv .toptitle p{ display:block; float:right; width:170px}
+#speDiv .toptitle p span{ display:block; color:#666; line-height:20px; height:60px; overflow:hidden}
+#speDiv .toptitle p font{ display:block;color:#F60; line-height:25px;}
+#speDiv .coninfo{text-align:left; line-height:30px; padding-left:15px}
+#speDiv .coninfo strong{ color:#F60; padding-left:5px; padding-right:5px;}
+#speDiv .fd30_btn{ clear:both; text-align:center; line-height:30px; padding-top:10px;}
+#speDiv .fd30_btn a{ margin-left:15px; display:block; float:left; line-height:25px; width:100px; text-align:left; color:#06C;}
+#speDiv .fd30_btn a.btn2{ background:#F60; color:#FFF; text-align:center; border-radius:5px}
+#speDiv .fd30_btn a:hover{ text-decoration:underline}
+#speDiv label{ display:block; float:left; margin-left:5px; line-height:25px;}
+#speDiv label input{ width:25px; line-height:25px; padding-right:3px;}
+#speDiv h6{ text-align:left; padding-left:10px; padding-top:5px; clear:both; width:286px; background:none; border-bottom:1px solid #ddd; margin:0px; font-weight:bold}
+#speDiv h4{ line-height:35px; background:#f5f5f5; margin:0px; padding:0px; text-indent:10px}
+#speDiv a.f6{ background:#F60; margin-left:10px; padding:8px; color:#FFF; border-radius:5px;}
+#speDiv a.f7{ background:#666; margin-left:10px; padding:8px; color:#FFF; border-radius:5px;}
+#speDiv center{ display:block;clear:both; width:286px; padding-top:10px;border-top:1px solid #ddd; margin-top:10px;}
+
+.ECS_NEEDINSURE{ padding-top:10px; font-weight:bold}
+
+ 
+label.kkks{ float:left; margin-right:20px; margin-top:10px; display:block; padding:10px 15px 10px 15px;  border:2px solid #ddd; text-align:left; cursor:pointer; position:relative; max-width:260px;}
+label.kkks:hover{border:2px solid #C40000;}
+label.kkks  strong{ display:block;   line-height:25px; height:25px; font-weight:bold; font-weight:bold; border-bottom:1px solid #eee;}
+label.kkks  strong i{ padding-left:10px; font-weight:normal}
+label.kkks  strong em{ font-style:normal; font-weight:normal}
+label.kkks  span{ display:block; line-height:20px; color:#999; padding-top:6px;}
+label.kkks.label_click{ border:2px solid #C40000;}
+/*label.kkks.label_click em{ position:absolute; display:block; width:20px; height:20px; background:URL(iis.png) no-repeat; right:0px; bottom:0px;}
+*/
+.labelinput input{ display:none}
+.labelinput input:checked +.kkks{border:2px solid #C40000;background:URL(iis.png) right bottom no-repeat;}
+
+.fdpay_code input{ display:none}
+.fdpay_code  label{border:2px solid #ddd;}
+/*.fdpay_code input:checked +.kkks{border:2px solid #C40000;background:URL(iis.png) right bottom no-repeat;}*/
+.fdpay_code  label.label_k{border:2px solid #C40000;background:URL(iis.png) right bottom no-repeat;}
+
+
+/*#paymentTable{ width:100%;  }
+#paymentTable th{ white-space:nowrap}
+#paymentTable td{ background:#FFF; padding:10px; border-top:1px solid #ddd}
+#paymentTable .kkks{display: inline-block;
+    width: 110px;
+    height: 36px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+    vertical-align:middle; position:relative; float:left}
+#paymentTable .list-tit input.inputds{ display:none}
+
+  .alipay-image{  
+    background-image: url('alipay.png');  background-color: #00a0e9;}
+
+  .wechat-image{ 
+    background-image: url('wechat.png');  background-color: #3cb034;}
+  
+#paymentTable  input:checked +.kkks{border:1px solid #b32424;}
+#paymentTable  input:checked +.kkks i{background:URL(iis.png) right bottom no-repeat; display:block; width:20px; height:20px; position:absolute; bottom:0px; right:0px;}*/
+
+.bless_note{ clear:both; padding-top:15px; vertical-align:text-top; }
+
+
+.fd_goods_number{ border:1px solid #ddd; height:32px;  width:120px;}
+.fd_goods_number a{ display:block; float:left; font-size:22px;width:30px; line-height:32px; text-align:center; color:#666; 
+
+margin:0px;}
+.fd_goods_number a:hover{ background:#f5f5f5}
+.fd_goods_number input{display:block; float:left; width:60px; padding:0px; margin:0px; border:0px; height:30px; line-
+
+height:30px; text-align:center; color:#666}

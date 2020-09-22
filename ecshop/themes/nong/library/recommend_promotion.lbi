@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language='javascript' src='{$template_dir}/js/fd30_time.js' type='text/javascript' charset='utf-8'></script>
+<!-- {if $promotion_goods} -->
+<div class="i_t"><span>限时购</span> <a href="../search.php?intro=promotion" class="more">更多抢购 ></a> </div>
+<div class="promotion_ad">
+  <div class="screenHd">10点场</div>
+  <div class="line"></div>
+  <div class="screenEndTips">距离结束还剩</div>
+  <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+  <!-- {if $smarty.foreach.promotion_foreach.first} -->
+  <span class="fd30_time" dayh="1" endtime="{$goods.gmt_end_time}"></span>
+  <!-- {/if} -->
+  <!--{/foreach}-->
+  <a href="../search.php?intro=promotion" class="seeMoreBtn" >查看全部&nbsp;&gt;</a> </div>
+<div class="promotion_goods">
+  <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+  <!-- {if $smarty.foreach.promotion_foreach.index<4} -->
+  <div class="cxjitem <!-- {if $smarty.foreach.promotion_foreach.first} -->cxjitem_f<!-- {/if} -->">
+    <div class="promotion_border transition_scale_img">
+      <div class="p"><a href="{$goods.url}" class="pic"><img src="{$goods.thumb}" width="200" height="200" alt="{$goods.name|escape:html}" class="goodsimg" /></a> </div>
+      <div class="i">
+        <div class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:20:""} </a></div>
+        <div class="brief">{$goods.brief|truncate:18:""}</div>
+        <div class="sy_num"><em><i style="width:{$goods.sy_w}%"></i></em><span>还剩{$goods.sy_num}件</span> </div>
+        <div class="promote_price"><span class="word_c"><em>限时价</em><i>{$goods.promote_price}</i></span><del>原价{$goods.market_price}</del></div>
+         <div class="clear0"></div><div class="btn"><a href="{$goods.url}" class="bg_red">立即抢购</a></div>
+      </div>
+      <div class="clear0"></div>
+    </div>
+  </div>
+  <!-- {/if} -->
+  <!--{/foreach}-->
+  <div class="clear0"></div>
+</div>
+<div class="clear0"></div>
+<!-- {/if} -->

@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $article_categories} -->
+<div class="leftbox">
+  <div class="t"><span class="border_c">{$lang.article_cat}</span></div>
+  <div class="info">
+    <!--{foreach from=$article_categories item=cat}-->
+<a href="{$cat.url}" class="cat">{$cat.name|escape:html}</a>
+ 
+    <!--{/foreach}--><div class="clear0"></div>
+  </div>
+</div>
+<div class="clear0"></div>
+<!-- {/if} -->

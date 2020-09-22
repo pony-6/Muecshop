@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" >
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="{$template_dir}/images/topic.css" rel="stylesheet" type="text/css" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_nav.lbi" --><!-- #EndLibraryItem -->
+<script>
+    $(function() {		   
+			$(".navs_m ul li a").eq(1).addClass("word_c");   
+    });  
+</script>
+<!--当前位置 start-->
+<script language='javascript' src='{$template_dir}/js/cxjc.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/fd30_time.js' type='text/javascript' charset='utf-8'></script>
+<!--当前位置 end-->
+<div class="group_bg"> </div>
+<!-- TemplateBeginEditable name="通栏广告" -->
+<!-- TemplateEndEditable -->
+<div class="block clearfix">
+  <div class="tgprc">
+    <!-- {if $gb_list} 如果有团购活动 -->
+    <!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+    <div class="qgitem_w"  data-sr="move 1rem, over 2s, enter top">
+      <div class=qgitem><a href="{$group_buy.url}" class="pic"><img src="{$group_buy.goods_thumb}" border="0" alt="{$group_buy.goods_name|escape:html}" /> </a>
+        <div class=pic_info>
+          <div class="goods_name"><a href="{$group_buy.url}">{$group_buy.goods_name|escape:html}</a></div>
+          <div class="group_buy_desc">{$group_buy.goods_brief}</div>
+          <div class="sy_num"><em><i style="width:{$group_buy.sy_w}%"></i></em><span class="word_c">剩余{$group_buy.sy_num}件</span></div>
+          <div class="fd30_time" dayh="1" endtime="{$group_buy.formated_end_date}" starttime="{$group_buy.formated_start_date}"></div>
+          <div class=clear0></div>
+        </div>
+        <div class="group_btn bg_c"><I>{$group_buy.formated_cur_price}</I><del>{$group_buy.market_price}</del><a href="{$group_buy.url}" class="word_c">立即团购</a></div>
+      </div>
+    </div>
+    <!--{/foreach}-->
+    <!-- {else} -->
+    <span style="margin:2px 10px; font-size:14px; line-height:36px;">{$lang.group_goods_empty}</span>
+    <!-- {/if} -->
+  </div>
+  <div class="blank5"></div>
+  <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+  <!--right end-->
+    <div class="clear10"></div> <div class="group_ad" >
+  <!-- TemplateBeginEditable name="底部广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+<div class="ads" id="Tr_cs{$ads_id}">{insert name='ads' id=$ads_id num=$ads_num}</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->  <div class="clear10"></div></div>
+</div>
+<div class="blank5"></div>
+<!--帮助-->
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!--帮助-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body></html>

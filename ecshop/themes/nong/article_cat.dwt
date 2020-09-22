@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'} <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block clearfix"> <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+  <!--left start-->
+  <div class="AreaL">
+    <div class="leftbox">
+      <div class="t"><span class="border_c">帮助中心</span></div>
+      <div class="info">
+        <!--{if $helps}-->
+        <!-- {foreach from=$helps item=help_cat} -->
+        <a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" class="cat">{$help_cat.cat_name}</a>
+        <!--{/foreach}-->
+        <!--{/if}-->  <div class="clear0"></div>
+      </div>
+    </div>
+    <!-- TemplateBeginEditable name="左边区域" --> <!-- #BeginLibraryItem "/library/article_category_tree.lbi" -->
+    <!-- {if $article_categories} -->
+    <div class="leftbox">
+      <div class="t"><span class="border_c">{$lang.article_cat}</span></div>
+      <div class="info">
+        <!--{foreach from=$article_categories item=cat}-->
+        <a href="{$cat.url}" class="cat">{$cat.name|escape:html}</a>
+        <!--{/foreach}-->
+        <div class="clear0"></div>
+      </div>
+    </div>
+    <div class="clear0"></div>
+    <!-- {/if} -->
+    <!-- #EndLibraryItem --> <!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="左边广告区域（宽200px）" --> <!-- TemplateEndEditable -->
+    <!--AD end-->
+  </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="AreaR">
+    <div class="leftbox">
+      <div class="t article_t"><span class="border_c"></span></div>
+      <div class="info boxCenterList">
+        <form action="{$search_url}" name="search_form" method="post" class="article_search">
+          <input name="keywords" type="text" id="requirement" value="{$search_value}" class="fd_input"  placeholder="请输入您要找的文章关键字" autocomplete="off" />
+          <input name="id" type="hidden" value="{$cat_id}" />
+          <input name="cur_url" id="cur_url" type="hidden" value="" />
+          <input type="submit" value="{$lang.button_search}" class="fd_submit bg_c" />
+        </form>
+        <!-- {foreach from=$artciles_list item=article} -->
+        <div class="a_item">
+           
+        <a href="{$article.url}" title="{$article.title|escape:html}">{$article.short_title}</a>
+            <P> {$article.description}...</P>
+            <p class="add_time">作者：{$article.author}/{$article.add_time}</p>
+         
+          <div class="clear0"></div>
+        </div>
+        <!-- {/foreach} -->
+      </div>
+    </div>
+    <div class="blank5"></div>
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+  <!--right end-->
+</div>
+<div class="blank5"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body><script>$(function (){
+					
+					$(".a_{$article.article_id}").addClass("word_c");
+					$(".leftbox .article_t span").html($(".Navigation a").last().html());
+					
+					
+					$('.leftbox .cat').each(function(i){
+								
+								if($(this).html()==$(".Navigation a").last().html())
+								{
+						$(this).addClass("word_c");}
+                     });
+					
+					
+			 
+					  
+ })
+</script>
+<script type="text/javascript">
+document.getElementById('cur_url').value = window.location.href;
+</script>
+</html>

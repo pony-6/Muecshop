@@ -1,0 +1,76 @@
+{if $topic.css neq ''}
+<style type="text/css">
+{
+$topic.css
+}
+</style>
+{/if}
+ 
+{* 包含脚本文件 *}
+{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+ 
+<ul class="goods_arr">
+<!-- {foreach from=$sort_goods_arr item=sort key=sort_name name=goods_arr} -->
+<li>
+<a href="javascript:;" class="top_sort top_sort_{$smarty.foreach.goods_arrs.iteration}">{$sort_name}</a>
+
+
+<div class="top_sort_f" id="f{$smarty.foreach.goods_arr.iteration}"><div class="fd_top">
+  <!-- {foreach from=$sort item=goods name=goodsname} -->
+  <div class="prcitem prcitem{$smarty.foreach.goodsname.iteration}" >
+    <div class="prcitem_border">
+      <div class="bq">
+        <!-- {if $goods.is_promote} -->
+        <span class="biaoq biaoq1">促销</span>
+        <!--{/if}-->
+        <!-- {if $goods.is_best} -->
+        <span class="biaoq biaoq2">精品</span>
+        <!--{/if}-->
+        <!-- {if $goods.is_new} -->
+        <span  class="biaoq biaoq3">新品</span>
+        <!--{/if}-->
+        <!-- {if $goods.is_hot} -->
+        <span  class="biaoq biaoq4">热卖</span>
+        <!--{/if}-->
+      </div>
+      <div class="p"><a href="{$goods.url}"> <img class="goodsimg" width="220" height="220" src="{$goods.goods_thumb}"></a></div>
+      <div class="i">
+        <div class="name"><a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.goods_name|escape:html}
+          <!-- {if $goods.brief} -->
+          <span>{$goods.brief}</span>
+          <!--{/if}-->
+          </a></div>
+        <div class="prices">
+          <!-- {if $goods.is_promote} -->
+          <em class="word_c">{$goods.promote_price}</em>
+          <!-- {else}-->
+          <em class="word_c">{$goods.shop_price} </em>
+          <!--{/if}-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--{/foreach}--> <div class="clear0"></div></div>
+</div></li>
+<!--{/foreach}--></ul>
+<script>
+$(function (){
+ 
+ $(".goods_arr li").hover(function(){ 
+		//$(this).toggleClass('hover_show');
+ 
+	   $(this).find(".top_sort_f").slideToggle();
+},function () {	
+
+    $(".top_sort_f").hide();
+  }
+ );
+
+
+})
+	
+</script>

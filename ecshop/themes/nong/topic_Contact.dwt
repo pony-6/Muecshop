@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$topic.title}_{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{if $topic.css neq ''}
+<style type="text/css">
+{
+$topic.css
+}
+</style>
+{/if}
+<style type="text/css">
+.topic_ad {
+background:URL({$title_pic}) top center no-repeat {
+$base_style
+}
+;
+}
+</style>
+{* 包含脚本文件 *}
+{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_abouts.lbi" --><!-- #EndLibraryItem -->
+<div class="abouts_bg abouts_bg2">
+  <div class="abouts_width"><span class="">{$topic.title}</span></div>
+</div>
+<div class="abouts_width">
+  <div class="t"><span class="word_c border_c">{$topic.title}</span></div>
+  <div class="topic_Contact"> {if $topic.intro neq ''}
+    {$topic.intro} 
+    {/if}  <div class="clear0"></div> </div>
+  <div class="clear0"></div>
+</div>
+<!-- #BeginLibraryItem "/library/mes.lbi" --><!-- #EndLibraryItem -->
+<script>
+$(".abouts_width .fr a").eq(1).addClass("bg_c");
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

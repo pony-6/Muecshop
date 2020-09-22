@@ -1,0 +1,95 @@
+<!-- #BeginLibraryItem "/library/h5_header.lbi" --><!-- #EndLibraryItem -->
+<div  id="fd_myID">
+  <div class="web_body" style=" padding-top:5rem;background:#fff; ">
+    <div class="cat_lef">
+      <div>
+        <!--{foreach from=$categories item=cat name=catename }-->
+        <a  href="javascript:;"  {if $smarty.foreach.catename.index eq 0}class="on"{/if}>{$cat.name|escape:html}</a>
+        <!--{/foreach}-->
+      </div>
+    </div>
+    <div class="cat_right">
+
+      <!--{foreach from=$categories item=cat name=catename }-->   
+      
+      
+
+      <!--{if $smarty.foreach.catename.iteration<=10}-->
+       <div class="cat_item cat_item_{$smarty.foreach.catename.index}" title="{$cat.name|escape:html}">
+       
+       
+       
+       
+        <div class="get_ad" >   
+        
+        
+            <!--{foreach from=$cat.ad_info item=ad name=ad_info}-->
+    <a href="{$ad.id}" target="_blank" title="{$ad.ad_name}" class='a_{$ad.link_email}'><img src="{$ad.src}"></a>
+    <!--{/foreach}-->
+        
+        </div>
+        
+        <div class="ct"><span><b> <a href="/../h5/#/products?category={$cat.id}" >{$cat.name|escape:html}</a></b></span></div>
+        <!--{if $cat.cat_id}-->
+        <div class="cat_child">
+          <!--{foreach from=$cat.cat_id item=child name=childname}-->
+          <a class="at" href="/../h5/#/products?category={$child.id}"> <img src="/../{$template_dir}/h5/{$child.id}.png"  onerror="javascript:this.src='/../images/no_picture.gif'" class="logo" /> {$child.name|escape:html}</a>
+          <!--{/foreach}-->
+          <div class="clear0"></div>
+          <a href="/../h5/#/products?category={$cat.id}" class="a_pd hreflang">进入{$cat.name|escape:html}频道 ></a> </div>
+        <!--{/if}-->
+        <div class="clear0"></div>
+      </div>
+      <!--{/if}-->
+      <!--{/foreach}-->
+    </div>
+    <div class="clear0"></div>
+  </div>
+  
+  <style>
+div.navbar_home{ border-bottom:1px solid #eee} 
+.clear0{ clear:both;}
+.web_body{ position:relative}
+.cat_lef{ width:8rem; position:fixed; background:#FFF;overflow-y:auto; height:73%;}
+.cat_lef a{ display:block; line-height:3.5rem; height:3.5rem; text-align:center}
+.cat_lef a.on{ color:#b4282d}
+.cat_right{ margin-left:8rem;  background:#fff}
+
+.cat_item{ clear:both;border-left:1px solid #eee; padding:1rem;}
+.cat_item .ct{ text-align:center; line-height:4rem;}
+.cat_item .ct span{ background:URL(/../themes/ec36_01/images/dian.gif) center center repeat-x ; padding-left:3rem ; padding-right:3rem;}
+.cat_item .ct b{ font-weight:normal; background:#fff; padding-left:1rem; padding-right:1rem; color:#000; font-size:1.2rem}
+.cat_child a{ display:block; width:33.33%; text-align:center; line-height:3rem; float:left; margin-top:1rem; color:#666; font-size:1rem;} 
+.cat_child a img{ width:4rem; height:auto; display:block; margin:auto}
+.cat_child .a_pd{ width:90%; margin:auto; font-size:1.2rem; float:none; line-height:3rem; background:#F9F3E3; color:#B7AB95}
+.get_ad img{ width:100%; height:auto}
+</style>
+<script>$(function (){
+$(".cat_lef a").click(function(){
+ 	  var type=$(this).index();  
+var hf_top = $(".cat_item_"+type).offset().top-50;
+$('body,html').animate({scrollTop:hf_top},1000);
+});
+$('.cat_item').each(function(i) {
+/*	var gtitle=$(this).attr("title");
+   $(".ads a[alt="+gtitle+"]").appendTo($(".get_ad[title="+gtitle+"]"));*/	
+  $(window).scroll(function() {  
+     var s_top=$(window).scrollTop();	
+	    var gg=i+1;
+	  var fi_top=$(".cat_item_"+gg).offset().top-60;			
+     if(s_top>fi_top){
+  	  
+	     $(".cat_lef a").removeClass("on");
+		 $(".cat_lef a").eq(gg).addClass('on');	
+        }
+		if(s_top==0){
+			 $(".cat_lef a").removeClass("on");
+		     $(".cat_lef a").eq(0).addClass('on');	
+			}
+	 
+	 })
+});		
+$(".fixed-bottom a").eq(1).addClass("word_c");	
+})</script>
+</div>
+<!-- #BeginLibraryItem "/library/h5_foot.lbi" --><!-- #EndLibraryItem -->

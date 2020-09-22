@@ -1,0 +1,56 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div id='history_div' class="i_recommend">
+  <div class="all_tt"><span> {$lang.view_history}</span>
+    <div class="clear0"></div>
+  </div>
+  <div class="Tr_cs">
+    <div class="cxjad_m">
+      <div class="i_prclist cxjinfo" id='history_list'> {insert name='history'}
+      
+      
+      
+
+       
+      </div>
+    </div>
+    <div class="TABLE_S">
+      <table border="0">
+        <tbody>
+          <tr>
+            <td><b class="cxjli"></b> <b class="cxjli"></b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="clear10"></div>
+</div>
+<script>if($(".i_recommend .cxjitem").size()<4){
+	$(".i_recommend .TABLE_S").hide();
+	};
+$("#history_div").textSlider({
+            speeds: 5000,
+            lines: 4,
+            offset: 9000000,
+            direc: 1,
+            qnum: 4
+        });
+</script>
+<script type="text/javascript">
+if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+{
+    document.getElementById('history_div').style.display='none';
+}
+else
+{
+    document.getElementById('history_div').style.display='block';
+}
+function clear_history()
+{
+Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+}
+function clear_history_Response(res)
+{
+document.getElementById('history_list').innerHTML = '{$lang.no_history}';
+}
+</script>

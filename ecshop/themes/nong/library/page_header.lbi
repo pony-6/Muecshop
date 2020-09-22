@@ -1,0 +1,110 @@
+{insert_scripts files='transport2.js,utils.js'}
+<link href="{$template_dir}/images/fd30_08.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<script language='javascript' src='{$template_dir}/js/fdjs.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/fdjs.json.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/cxjc.js' type='text/javascript' charset='utf-8'></script>
+</head><body>
+
+<div class=fd_top0 style="background: #886A45;">
+  <div class=fd_top>
+    <div class="fl">好的生活，没那么贵</div>
+
+    <div class="fr"><font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font></div>
+
+    <div class="fm fr">
+      <ul class="nav_top">
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+        <li> <a href="{$nav.url}"
+
+          <!-- {if $nav.opennew eq 1} -->
+          target="_blank"
+          <!-- {/if} -->
+          >{$nav.name}</a> </li>
+        <!-- {/foreach} -->
+      </ul>
+    </div>
+
+  </div>
+  </div>
+
+  <div class=clear0></div>
+
+<link rel="stylesheet" href="themes/nong/skin/css/min.css?version=123">
+<link rel="stylesheet" href="themes/nong/skin/css/tm.css?version=123">
+
+<div id="content" class="eshop head-expand tb-shop">
+  <div id="hd">
+    <div class="layout">
+      <div class="header-top">
+		<div class="header-logo">
+			<a href="/"><img src="{$shop_logo.value}"></a>
+		</div>
+        <ul class="nav">
+          <li><a href="catalog.php">本店所有商品</a></li>
+          <li><a {if $navigator_list.config.index eq 1} class="current"{/if} href="./" rel="nofollow">{$lang.home}</a></li>
+          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav name=nav} -->
+          <li><a {if $nav.active eq 1} class="current"{/if} href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} rel="nofollow">{$nav.name}</a></li>
+          <!-- {/foreach} -->
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--[if !IE]><!-->
+  <script src="{$template_dir}/js/scrollReveal.min.js"></script>
+<script>$(function (){
+ 					
+  $(".search_bg").click(function(){	   					  
+      $(".key_label").hide(); 
+	$(".search_bg").hide();
+  });
+  $("#keyword").focus(function(){
+      $(".key_label").show();
+	  $(".search_bg").show();
+  });
+ 
+
+
+$(".cat_lv1").hover(function(){
+		if($(this).find(".at").size()>7){
+			 	$(".fd_top1_bg").addClass("fd_top1_bg_b_h");
+			};					 
+ 	$(".fd_top1_bg").addClass("fd_top1_bg_b");
+ },function () {	
+    $(".fd_top1_bg").removeClass("fd_top1_bg_b fd_top1_bg_b_h");
+  });	
+			
+window.sr = new scrollReveal({
+	// reset: true,
+	move: '100px',
+	mobile: true
+});})
+</script>
+<!--<![endif]-->
+<div class="clear0"></div>
+<script>	
+function addFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("对不起您的浏览器不支持操作，请使用Ctrl+D进行添加");
+        }
+    }
+};
+ 
+
+</script>

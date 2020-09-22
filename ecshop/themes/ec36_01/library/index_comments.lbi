@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <!-- {if $my_comments} -->
+<div class="my_comments_bg">
+  <div class="my_comments web_body">
+    <div class="i_t"><span>大家都在说<b>生活，没有统一标准</b></span> </div>
+
+    <div class="Tr_cs">
+      <div class="up_down">
+        <div class="pp"><a class="up" href="javascript:;"></a><a class="down" href="javascript:;"></a></div>
+      </div>
+      <div class="cxjad_m">
+        <div class="cxjinfo">
+          <!--{foreach from=$my_comments item=comments name=my_comments}-->
+          <div class="comments_item cxjitem  divs_{$smarty.foreach.my_comments.index}"> <div class="comments_info transition_scale_a">
+           <a href="goods.php?id={$comments.id_value}"  class="pic"><img src="{$comments.goods_thumb}" alt="{$comments.goods_name}" /></a>
+           <div class="info">
+           <div class="p2">
+                <!-- {if $comments.user_name} -->
+                {$comments.user_name}
+                <!-- {else}-->
+                匿名
+                <!--{/if}--> <span>{$comments.add_time}</span></div>
+                <div class="p3"><a target="_blank" href="goods.php?id={$comments.id_value}">{$comments.goods_name|truncate:16:""}</a> <span class="word_c">{$comments.shop_price}</span></div>
+
+              <div class="p1"><a target="_blank" href="goods.php?id={$comments.id_value}">{$comments.content|truncate:100:""}</a></div>
+
+
+            </div></div>
+          </div>
+          <!--{/foreach}-->
+        </div>
+      </div>
+    </div>
+    <div class="clear0"></div>
+  </div>
+</div>
+<script>  $(function (){
+$(".my_comments").textSlider({
+            speeds: 5000,
+            lines: 1,
+            offset: 5000,
+            direc: 1,
+            qnum: 3
+        }); })
+</script>      <!-- {/if} -->

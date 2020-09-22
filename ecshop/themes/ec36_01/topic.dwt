@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" >
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$topic.title}_{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="{$template_dir}/images/topic.css" rel="stylesheet" type="text/css" />
+{if $topic.css neq ''}
+<style type="text/css">
+{
+$topic.css
+}
+</style>
+{/if}
+ 
+{* 包含脚本文件 *}
+{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+</head>
+<body class="topic_{$topic.topic_id}">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_nav.lbi" --><!-- #EndLibraryItem -->
+<script language='javascript' src='{$template_dir}/js/cxjc.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/fd30_time.js' type='text/javascript' charset='utf-8'></script>
+<div class="topic_top">
+  <div class="top">
+    <div class="web_body"><b>今日限时购</b> 本场还剩 <span class="fd30_time" dayh="1" endtime="{$topic.end_time}" starttime="{$topic.start_time}"></span></div>
+    <div class="clear0"></div>
+  </div>
+  <div class="btm">
+    <div class="web_body">
+      <!-- {foreach from=$sort_goods_arr item=sort key=sort_name name=goods_arrs} -->
+      <a href="#f{$smarty.foreach.goods_arrs.iteration}">{$sort_name}</a>
+      <!--{/foreach}-->
+      <div class="clear0"></div>
+    </div>
+  </div>
+</div>
+<div class="web_body">
+  <!-- {foreach from=$sort_goods_arr item=sort key=sort_name name=goods_arr} -->
+  <div class="sort_name_f" id="f{$smarty.foreach.goods_arr.iteration}">
+    <div class="t"> <span>{$sort_name}</span> </div>
+    <div class="tgprc">
+      <!-- {foreach from=$sort item=goods name=goodsname} -->
+      <div class="qgitem_w"  data-sr="move 1rem, over 2s, enter top">
+        <div class="qgitem"><a href="{$goods.url}" class="pic"><img src="{$goods.goods_thumb}" width="220" height="220" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+          <div class=pic_info>
+            <div class="goods_name"><a href="{$goods.url}">{$goods.goods_name|escape:html}</a></div>
+            <div class="group_buy_desc">{$goods.goods_brief}</div>
+            <div class="sy_num"><em><i style="width:{$goods.sy_w}%"></i></em><span class="word_c">剩余{$goods.sy_num}件</span></div>
+            <div class="fr">已售<b class="word_c1">
+               <!-- {if $goods.buy_num==""} -->0
+               <!-- {else}-->
+            {$goods.buy_num}<!--{/if}-->
+            </b>件</div>
+            <div class=clear0></div>
+          </div>
+          <div class="group_btn bg_c"><I>
+            <!-- {if $goods.promote_price neq ""} -->
+            {$goods.promote_price}
+            <!-- {else}-->
+            {$goods.shop_price}
+            <!--{/if}-->
+            </I><del>{$goods.market_price}</del><a href="{$goods.url}" class="word_c">立即抢购</a></div>
+        </div>
+      </div>
+      <!--{/foreach}-->
+      <div class="clear0"></div>
+    </div>
+  </div>
+  <!--{/foreach}-->
+  <div class="clear10"></div>
+  <div class="group_ad"  data-sr="move 1rem, over 2s, enter top"> {insert name='ads' id=24 num=4}
+    <div class="clear10"></div>
+  </div>
+  {if $topic.intro neq ''}
+  <div class="topic_intro"> {$topic.intro}
+    <div class="clear0"></div>
+  </div>
+  {/if}
+  <div class="clear10"></div>
+</div>
+<script>
+$(function (){
+ $(".navs_m ul li a").eq(2).addClass("word_c");   
+ $(".topic_top .btm a").eq(0).addClass("border_c");
+ $(".topic_top .btm a").click(function(){
+	$(this).addClass("border_c");
+	$(this).siblings().removeClass("border_c");
+});
+
+$(window).scroll(function() {  					 
+	   if($(window).scrollTop()>300){ 
+		 $('.topic_top .btm').addClass('btm_f')
+      }  
+	 else{ 
+		  $('.topic_top .btm').removeClass('btm_f');
+ 
+		 }; 
+
+});
+})
+	
+</script>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> 
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

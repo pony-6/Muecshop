@@ -1,0 +1,74 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="i_recommend new_goods">
+  <div class="i_t"><span>
+新品首发<b>周一周四上新，为你寻觅世间好物</b>
+ </span> <a href="../search.php?intro=new" class="more">更多新品 ></a>
+    <div class="clear0"></div>
+  </div>
+  <div class="Tr_cs">
+  <div class="up_down">
+      <div class="pp"><a class="up" href="javascript:;"></a><a class="down" href="javascript:;"></a></div>
+    </div>
+
+
+    <div class="cxjad_m">
+      <!-- {if $new_goods} -->
+      <!-- {if $cat_rec_sign neq 1} -->
+      <div class="i_prclist cxjinfo" id="show_new_area">
+        <!-- {/if} -->
+        <!--{foreach from=$new_goods item=goods  name=new_goodsss}-->
+        <div class="prcitem cxjitem cxjitem_{$smarty.foreach.new_goodsss.index}"  >
+          <div class="prcitem_border">
+            <div class="p">
+            <a href="{$goods.url}" class="aimg" ><img src="{$goods.thumb}" dir="{$goods.goods_img}" csrc="{$goods.goods_img}"  alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+                    
+            </div>
+            <div class="i">
+              <div class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|truncate:20:""} </a></div>
+            
+              <div class="prices">
+                <!-- {if $goods.promote_price neq ""} -->
+                <em class="word_c">{$goods.promote_price}</em>
+                <!-- {else}-->
+                <em class="word_c">{$goods.shop_price}</em>
+                <!--{/if}-->
+                  <!-- {if $goods.brief} -->
+              <span class="truncate_brief"> |  {$goods.brief|truncate:5:""}</span>
+              <!--{/if}-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--{/foreach}-->
+        <!-- {if $cat_rec_sign neq 1} -->
+        <div class="clear0"></div>
+      </div>
+      <!-- {/if} -->
+      <!-- {/if} -->
+    </div>
+  </div>
+  <div class="clear10"></div>
+</div>
+<script>  $(function (){
+$(".new_goods").textSlider({
+            speeds: 5000,
+            lines: 5,
+            offset: 9000000,
+            direc: 1,
+            qnum: 5
+        }); 
+/*
+$(".new_goods .prcitem_border").hover(function() 
+  {
+	  var gsrc=$(this).find(".goodsimg").attr("dir");
+	
+	  $(this).find(".goodsimg").attr('src',gsrc);
+  
+  },function(){ 
+    var gsrc1=$(this).find(".goodsimg").attr("csrc");
+$(this).find(".goodsimg").attr('src',gsrc1);
+	})
+*/
+
+})
+</script>

@@ -1,0 +1,61 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="gmax_pic_box pic">
+  <!-- {if $pictures}-->
+  <a class="m" href="javascript:;" > <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" class="gmax_pic"/> </a> {$goods.goods_w}
+  <!-- {else} -->
+  <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}"  class="gmax_pic"/>
+  <!-- {/if}-->
+</div>
+<!-- {if $pictures}-->
+<div class="picture pic" id="imglist">
+  <DIV class="cxjad_m">
+    <DIV class="cxjinfo">
+      <!-- {foreach from=$pictures item=picture name=no}-->
+      <!-- {if $smarty.foreach.no.iteration < 2}  -->
+      <DIV class="cxjitem"><a  class="border_mc border_c" href="javascript:;" 
+        rev="{$picture.img_url}"
+        title="{$picture.img_desc|escape:html}"> <img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" /></a></DIV>
+      <!-- {else}-->
+      <DIV class="cxjitem"> <a  href="javascript:;"
+        rev="{$picture.img_url}"
+        title="{$picture.img_desc|escape:html}" class="border_mc"> <img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" alt="{$goods.goods_name}" /></a></DIV>
+      <!-- {/if}-->
+      <!--{/foreach}-->
+    </DIV>
+  </DIV>
+</div>
+<script> 
+ $(function() {$(".gmax_pic").attr('src',$(".picture .cxjitem a").first().attr("rev"));	
+
+		
+   $(".picture .cxjitem a").hover(function(){ 
+	   $(".picture .cxjitem a").removeClass("border_c");
+		$(this).addClass('border_c');
+		var imgSrc=$(this).attr("rev");
+
+
+		$(".gmax_pic").attr('src',imgSrc);	
+
+     });
+
+});
+    
+    
+    
+    </script>
+<!-- {/if}-->
+<style>
+.gmax_pic_box{background:#FFF; margin-bottom:5px; float:right; width:85%;}
+.gmax_pic_box a.m{   width: 100%;  text-align:center; display:block}
+.gmax_pic_box img{ max-width:100%; height:auto}
+ 
+.picture{ float:left; width:12%; }
+ 
+.picture{ position:relative;z-index:1;}
+.picture .cxjad_m{ position:relative; z-index:2; }
+.picture .cxjad_m .cxjinfo{ position:relative; margin:auto}
+.picture a{     width: 75px;display:block;  padding:4px;border-style:solid; border-width:1px;}
+.picture .cxjitem{ width:70px; height:85px;}
+.picture .cxjitem img{ width:60px; height:60px; margin:0px; padding:0px;}
+</style>
+<div class="clear0"></div>

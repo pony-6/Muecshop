@@ -1,0 +1,161 @@
+{insert_scripts files='transport2.js,utils.js'}
+<link href="{$template_dir}/images/fd30_08.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<script language='javascript' src='{$template_dir}/js/fdjs.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/fdjs.json.js' type='text/javascript' charset='utf-8'></script>
+<script language='javascript' src='{$template_dir}/js/cxjc.js' type='text/javascript' charset='utf-8'></script>
+</head><body>
+<a name="top"></a>
+<div class=fd_top0>
+  <div class=fd_top>
+    <div class="fl">非遗文创，没那么贵</div>
+    
+    <div class="fr"><font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font></div>
+    
+    <div class="fm fr">
+      <ul class="nav_top">
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+        <li> <a href="{$nav.url}" 
+          
+          <!-- {if $nav.opennew eq 1} -->
+          target="_blank"
+          <!-- {/if} -->
+          >{$nav.name}</a> </li>
+        <!-- {/foreach} -->
+      </ul>
+    </div>
+    
+  </div>
+  
+  <div class=clear0></div>
+</div>
+<div class="fd_top1">
+  <div class="fd_top">
+    <div class="navs_l"> <a href="../index.php" name="top"><img src="{$template_dir}/images/logo.gif" class="logo" /></a> </div>
+    <div class="logo_r"> 
+	
+	<div class="fl search_an">  
+      <div class="search_label">
+        <form id="searchForm" name="searchForm" method="get" action="search.php"  class="SearchBar" onSubmit="return checkSearchForm()">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><select name="category" id="category" class="B_input" style="display:none">
+                  <option value="0">{$lang.all_category}</option>
+                  
+                  
+                    
+                    
+                    
+                    {$category_list}
+                  
+                  
+                  
+                  
+                
+                </select>
+                <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="inputstyle keywords" placeholder="龙泉叶匠" autocomplete="off" /></td>
+              <td><input name="imageField" type="submit" value="" title="搜索" class="btn_search"  /></td>
+               
+            </tr>
+          </table>
+        </form>
+        <div class="s_keyword">
+          <label for="keyword" class="key_label transition">
+          <p><a href="search.php">全局搜索</a></p>
+          {foreach from=$searchkeywords item=val  name=searchkeywords}<a href="search.php?keywords={$val|escape:url}">{$val}</a> {/foreach}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="search_bg"></div>
+    
+    
+	<!-- #BeginLibraryItem "/library/cart.lbi" -->
+      <div class="cart fr" id="ECS_CARTINFO"> {insert name='cart_info'} </div>
+      <!-- #EndLibraryItem --> </div>
+    <div class="clear0 p_hide"></div>
+    <div class="classmenu transition">
+      <ul class="categories">
+        <li><a href="../index.php" class="ao home" >首页</a></li>
+        <!--{foreach from=$categories item=cat name=catename }-->
+ <!--{if $smarty.foreach.catename.iteration<=8}-->
+        <li class="cat_lv1 hover  post_cat{$cat.id} li{$smarty.foreach.catename.iteration}" > <a href="{$cat.url}" class="ao">{$cat.name|escape:html}</a>
+          <!--{if $cat.cat_id}-->
+          <div class="cat_p transition">
+            <div class="cat_cat" >
+              <!--{foreach from=$cat.cat_id item=child name=childname}-->
+              <a class="at <!--{if $child.fdcolor}-->{$child.fdcolor}<!--{/if}-->" href="{$child.url}">
+              <img src="{$template_dir}/images/ad/{$child.id}.png" onerror="javascript:this.src='{$template_dir}/images/ad/3.png'">
+              
+               {$child.name|escape:html}</a>
+              <!--{/foreach}-->
+              <div class="clear0"></div>
+            </div>
+          </div>
+          <!--{/if}-->
+        </li>
+   <!--{/if}-->
+        <!--{/foreach}-->
+      </ul>
+      <div class="clear0"></div>
+    </div>
+  </div>
+  <div class="clear0"></div>
+  <div class="fd_top1_bg"></div>
+</div>
+<!--[if !IE]><!-->
+  <script src="{$template_dir}/js/scrollReveal.min.js"></script>
+<script>$(function (){
+ 					
+  $(".search_bg").click(function(){	   					  
+      $(".key_label").hide(); 
+	$(".search_bg").hide();
+  });
+  $("#keyword").focus(function(){
+      $(".key_label").show();
+	  $(".search_bg").show();
+  });
+ 
+
+
+$(".cat_lv1").hover(function(){
+		if($(this).find(".at").size()>7){
+			 	$(".fd_top1_bg").addClass("fd_top1_bg_b_h");
+			};					 
+ 	$(".fd_top1_bg").addClass("fd_top1_bg_b");
+ },function () {	
+    $(".fd_top1_bg").removeClass("fd_top1_bg_b fd_top1_bg_b_h");
+  });	
+			
+window.sr = new scrollReveal({
+	// reset: true,
+	move: '100px',
+	mobile: true
+});})
+</script>
+<!--<![endif]-->
+<div class="clear0"></div>
+<script>	
+function addFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("对不起您的浏览器不支持操作，请使用Ctrl+D进行添加");
+        }
+    }
+};
+ 
+
+</script>

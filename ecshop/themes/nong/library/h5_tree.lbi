@@ -1,0 +1,14 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert name='ads' id=215 num=10}
+<ul class="fd-menu">
+  <li><span>网易自营品牌</span></li>
+  <li><span>30天无忧退货</span></li>
+  <li><span>48小时快速退款</span></li>
+  <div class="clear0"></div>
+</ul>
+<div class="ads ad_2"> {insert name='ads' id=216 num=10}
+  <div class="clear0"></div>
+</div>
+
+ 
+

@@ -1,0 +1,6 @@
+<!-- {foreach from=$shipping_list name=shipping_list item=shipping} 循环配送方式 -->
+
+<input name="shipping" type="radio" value="{$shipping.shipping_id}"  supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" id="shipping_{$shipping.shipping_id}" />
+<label class="kkks" for="shipping_{$shipping.shipping_id}"  title="{$shipping.shipping_desc}"> <strong> {$shipping.shipping_name} </strong> <span>{$shipping.format_shipping_fee}</span> </label>
+<!-- {/foreach} 循环配送方式 -->
+<div class="clear0"></div>

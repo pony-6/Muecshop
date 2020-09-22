@@ -1,0 +1,19 @@
+.channel_page .up_down{position:relative; z-index:9; width:1210px; margin:auto; display:block; margin-left:-60px;}
+.channel_page .up_down .pp{ top:200px;}
+
+/*=====*/
+.channel_page{ width:1090px; margin:auto; background:#FFF}
+
+
+
+.channel_page  .i_t{ text-align:center; vertical-align:middle}
+.channel_page  .i_t span{ position:static; font-size:24px;}
+.channel_page  .i_t img{ margin-right:15px;}
+.channel_page  .cat_desc{ text-align:center; padding-bottom:20px; padding-top:10px; font-size:14px; color:#999}
+ 
+.channel_page .prcitem .prcitem_border .i{ padding-top:30px; }
+.channel_page .prcitem .prcitem_border .i .prices{  border-bottom:1px solid #eee; width:50%; margin:auto; margin-bottom:10px;}
+.channel_page  .bq{  top:8px; }
+
+
+

@@ -1,0 +1,74 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="site-footer">
+  <!--<div class="our_services footer">
+    <div class="c c_1">
+      <div class="ct">客服电话</div>
+      <p class="c_tell">0593-7870691</font></p>
+      <p class="c_time">9:00-22:00 </p>
+      <p class="c_a"> <a class="kefu_qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2756808376&amp;site=qq&amp;menu=yes" title="QQ咨询" target="_blank"> 用户反馈 </a> <a class="kefu_ww" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2756808376&amp;site=qq&amp;menu=yes" title="QQ咨询" target="_blank" >在线客服</a> </p>
+    </div>
+    <div class="c c_2">
+      <div class="ct">何为严选</div>
+      <div class="c_p">
+      <div class="c_info"> 网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品 </div>
+      <div class="gz">
+      
+      <span>关注我们 :</span>
+      <a class="kefu_qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2756808376&amp;site=qq&amp;menu=yes" title="QQ咨询" target="_blank"></a> <a class="kefu_ww" href="http://weibo.com/u/5887646738" target="_blank" title="新浪微博"></a> </div></div>
+    </div>
+    <div class="c c_3">
+      <div class="ct">扫码下载严选APP</div>
+      <img src="images/fudao.png"> <br>
+      <span class="word_c"> 下载领1000元新人礼包</span></div>
+    <div class="clear10"></div>
+  </div>-->
+  
+  
+  
+</div>
+<div class="right_nav">
+  <ul>
+    <li  class="lis li1 transform" > <i class="ioc"></i> <span id="cartCount" class="bg_c">{$goods_num}</span>
+      <div class="ii translateX">
+        <div class="info"> <a href="flow.php?step=checkout">购物车 </a> </div>
+        <b class="jh"></b></div>
+    </li>
+    <li class="lis li2 transform"> <i class="ioc"></i>
+      <div class="ii translateX">
+        <div class="info"> <a href="user.php?act=message_list" target="_blank">建议有奖</a> </div>
+        <b class="jh"></b></div>
+    </li>
+    <li class="lis li3"> <i class="ioc"></i>
+      <div class="ii">
+        <div class="info"><img src="/{$qr_code.value}"  width="160">
+        <!--<div class="info"><img src="{$template_dir}/images/fudao.png"  width="160">-->
+          <p>扫二维码，关注官方微信</p>
+        </div>
+        <b class="jh"></b></div>
+    </li>
+    <li class="lis li4 transform"> <i class="ioc"><a href="javascript:;" ></a></i>
+      <div class="ii translateX">
+        <div class="info"> <a href="javascript:;" >回到顶部</a> </div>
+        <b class="jh"></b></div>
+    </li>
+  </ul>
+</div>
+<script>
+$(function (){
+			  <!--$("#cartCount").html($("#goodsCount").html());-->
+ $(".li4 a").click(function(){
+$('body,html').animate({scrollTop:0},1000);});	
+ 
+ $(window).scroll(function() {  
+   var s_top=$(window).scrollTop();				   
+   if(s_top>300){ 
+	     $(".fd_top1").addClass("fd_top1_v");
+		 $(".user_info").addClass("user_info_v");
+         } else{
+			  $(".fd_top1").removeClass("fd_top1_v");	
+			  $(".user_info").removeClass("user_info_v");	
+			 }
+ 
+ });
+})
+</script>

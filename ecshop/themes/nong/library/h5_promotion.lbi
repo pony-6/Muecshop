@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+<script language='javascript' src='{$template_dir}/js/fd30_time.js' type='text/javascript' charset='utf-8'></script>
+<div class="promotion_goods">
+  <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+  <!-- {if $smarty.foreach.promotion_foreach.first} -->
+  <div class="promotion_item">
+    <div class="fl">
+      <h3>严选限时购</h3>
+      <span class="fd30_time" dayh="1" endtime="{$goods.gmt_end_time}"></span>
+      <p>下一场 18:00 开始</p>
+    </div>
+    <div class="fr"><a href="/../h5/#/product?product=90" class="pic"><img src="/{$goods.thumb}" width="220" height="220" alt="{$goods.name|escape:html}" class="goodsimg" /><span> {$goods.promote_price} <del>{$goods.shop_price} </del> </span></a></div>
+    <div class="clear0"></div>
+  </div>
+  <!-- {/if} -->
+  <!--{/foreach}-->
+</div>
+<!-- {/if} -->
+<div class="ads ad_1"> {insert name='ads' id=217 num=1}   <div class="clear0"></div></div>
+<div class="promotion_ad ads">{insert name='ads' id=218 num=6}
+
+</div>

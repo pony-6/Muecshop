@@ -1,0 +1,6 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="user_info"> <span class="user_info_ico"></span>
+ {if $user_info}<a href="user.php">{$lang.user_center}</a><a href="user.php?act=logout">{$lang.user_logout}</a>{else}<a href="user.php" class="sign">登录</a><a href="user.php?act=register" class="reg">注册</a>{/if} 
+ 
+</div>

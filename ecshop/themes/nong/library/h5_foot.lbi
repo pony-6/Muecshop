@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="fixed-bottom"><a href="/../h5/index.htm">首页</a><a href="/../h5/index.htm?c=0">分类</a> <a href="/../h5/#/cart/1">购物车</a> <a href="/../h5/#/profile">我的</a></div>
+<div class="clear0"></div>
+<!--qq-->
+<div class="qq_top">
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+
+<a class="qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$im}&amp;site=qq&amp;menu=yes"><img alt="" src="/../{$template_dir}/h5/kfIcon.png">客服</a>
+
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+
+<a class="top" href="#top"><img alt="" src="/../{$template_dir}/h5/topIcon.png"></a></div>
+<!--weix-->
+<div class="h5_foot">Copyright © 2012-2018 M.ZEAL. All Rights Reserved. </div>
+<script>
+$(".qq_top .top").click(function(){
+$('body,html').animate({scrollTop:0},1000);});	
+</script>
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- #BeginLibraryItem "/library/page_abouts.lbi" --><!-- #EndLibraryItem -->
+<script src="{$template_dir}/images/wap/scrollReveal.min.js"></script>
+
+
+
+<div class="abouts_bg abouts_Pro_bg">
+  <div class="abouts_width"><span  data-sr="move 5rem, over 2s, enter left">Product</span></div>
+</div>
+<div class="abouts_width abouts_Pro">
+  <div class="abouts_t" data-sr="move 5rem, over 2s, enter top"><span class="border_c" >我们产品</span></div>
+  <div class="info case_item" data-sr="move 5rem, over 1s, enter bottom">
+    <!-- {foreach from=$artciles_list item=article} -->
+    <div class="item"> <a href="{$article.url}" title="{$article.title|escape:html}"><span><img  src="
+          
+               <!-- {if $article.file_url } -->{$article.file_url}<!-- {else} -->images/logo.jpg<!-- {/if} -->
+          
+          
+          " /></span> <b>{$article.short_title}</b>
+      <P> {$article.description}</P>
+      </a> </div>
+    <!-- {/foreach} -->
+    <div class="clear0"></div>
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+  <div class="clear0"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body><script>$(function (){
+		$(".abouts_width .fr a").eq(4).addClass("bg_c");	 
+ })
+</script>
+</html>
